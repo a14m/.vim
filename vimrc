@@ -1,18 +1,33 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-"set nocompatible
-set nu
-"set binary noeol
+let mapleader = ';' " define map leader
+
+"set numbers column on the left
+set number
+
+"set colorscheme
 colorscheme xoria256
+
+" Sets how many lines of history VIM has to remember
+" set history=700
+
 syntax on
 
-set showcmd         " display incomplete commands
-"set modeline        " last lines in document sets vim mode
-"set modelines=3     " number lines checked for modelines
-"set shortmess=atI   " Abbreviate messages
-"set nostartofline   " don't jump to first character when paging
-let mapleader = ';' " define map leader
+" display incomplete commands
+set showcmd         
+
+" last lines in document sets vim mode
+"set modeline        
+
+" number lines checked for modelines
+"set modelines=3
+
+" Abbreviate messages
+"set shortmess=atI   
+
+" don't jump to first character when paging
+"set nostartofline   
 
 cmap :Wq :wq
 cmap :WQ :wq
