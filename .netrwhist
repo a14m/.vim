@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/usr/local/Cellar/imagemagick/6.8.0-10/share/man/man1'
-let g:netrw_dirhist_2='/Users/AbdelRazzak/Sites/redmine/config/initializers'
-let g:netrw_dirhist_3='/Users/AbdelRazzak/.rvm'
-let g:netrw_dirhist_4='/Users/AbdelRazzak/Sites/redmine/config'
-let g:netrw_dirhist_5='/Users/AbdelRazzak/Sites/redmine/public'
-let g:netrw_dirhist_6='/Users/AbdelRazzak/Sites/theguide-erp/entities'
-let g:netrw_dirhist_7='/Users/AbdelRazzak/.passenger'
