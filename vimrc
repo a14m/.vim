@@ -3,6 +3,14 @@ call pathogen#helptags()
 
 let mapleader = ';' " define map leader
 
+"fix not copying between clipboard and vim
+vmap <leader>y :w !pbcopy<CR><CR>
+set clipboard=unnamed
+
+"fix backspace not deleteing existing text
+set backspace=indent,eol,start 
+set whichwrap+=<,>,h,l
+
 "set numbers column on the left
 set number
 
@@ -17,11 +25,15 @@ syntax on
 " display incomplete commands
 set showcmd         
 
-" last lines in document sets vim mode
-"set modeline        
+"disable the modelines which i don't understand
+set modelines=0
+set nomodeline
 
-" number lines checked for modelines
-"set modelines=3
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" Ignore compiled files 
+set wildignore=*.o,*~,*.pyc
 
 " Abbreviate messages
 "set shortmess=atI   
@@ -33,12 +45,6 @@ cmap :Wq :wq
 cmap :WQ :wq
 
 
-"set expandtab           " enter spaces when tab is pressed
-set tabstop=4           " use 4 spaces to represent tab
-set softtabstop=4
-set shiftwidth=4        " number of spaces to use for auto indent
-
-
 " Fast saving
 nmap <leader>w :w!<cr>
 
@@ -48,34 +54,47 @@ nmap <leader>q :q<cr>
 " Fast editing of the .vimrc
 map <leader>e :e! ~/.vimrc<cr>
 
-" reload it
-nmap<leader>re :w<cr>:so %<cr>
 
 " Set 7 lines to the curors - when moving vertical..
 "set so=7
 
-"set wildmenu "Turn on WiLd menu
+"Turn on WiLd menu
+set wildmenu 
 
-set ruler "Always show current position
+" Always show the status line
+set laststatus=2
+" Format the status line
 
-"set cmdheight=1 "The commandbar height
+
+"Always show current position
+set ruler 
+
+"The commandbar height
+"set cmdheight=1 
 
 "set hid "Change buffer - without saving
 
-set noignorecase "Case Senetive searching
-"set ignorecase "Ignore case when searching
+"Case Senetive searching shortend noic
+set noignorecase 
+
+"Ignore case when searching shortend ic
+"set ignorecase 
 
 "set smartcase
 
-set hlsearch "Highlight search things
+"Highlight search things shortend hls or nohls
+set hlsearch 
 
-set incsearch "Make search act like search in modern browsers
-set nolazyredraw "Don't redraw while executing macros 
+"Make search act like search in modern browsers
+set incsearch 
+"Don't redraw while executing macros 
+"set nolazyredraw 
 
-set magic "Set magic on, for regular expressions
+"Set magic on, for regular expressions
+set magic 
 
-set showmatch "Show matching bracets when text indicator is over them
-"set mat=2 "How many tenths of a second to blink
+"Show matching bracets when text indicator is over them
+set showmatch 
 
 
 set lbr
@@ -90,6 +109,7 @@ set si
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+set tabstop=4           " use 4 spaces to represent tab
 
 " set a vertical colomn at char 80
 "set colorcolumn=80
@@ -97,8 +117,10 @@ set softtabstop=4
 "Wrap lines
 set wrap
 
+"set visiual bell
 set vb
-set backspace=indent,eol,start "fix backspace not deleteing existing text
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Omni complete functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -125,9 +147,6 @@ nmap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 ":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 ":nnoremap <leader>cc :set cursorline!<CR>
 
-"copy between terminal and clipboard
-"===================================
-"set clipboard=unnamed
 
 "Easier window movement"
 "=======================
@@ -155,7 +174,7 @@ nmap <silent> <leader>mj <C-W>J
 "NerdTree"
 "=========
 nmap <leader>nt :NERDTreeToggle<cr>
-cmap ntf NERDTreeFind<cr>
+"cmap ntf NERDTreeFind<cr>
 "nmap <leader>ntq :NERDTreeClose<cr>
 
 "SuperTab"
