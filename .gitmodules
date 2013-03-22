@@ -13,3 +13,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+[submodule "bundle/buffer explorer"]
+	path = bundle/buffer explorer
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
