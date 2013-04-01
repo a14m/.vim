@@ -218,34 +218,47 @@ snippet array
 snippet sg
 	public function set${1:Attribute}($${2:attr})
 	{
-		$this->${3:$2} = $${4:$2};
+		$this->$2 = $2;
 	}
 
-	public function get${5:$1}()
+	public function get$1()
 	{
-		return $this->${6:$2};
+		return $this->$2;
 	}
-	${7}
+	${3}
 snippet sag
 	public function set${1:Attribute}($${2:attr})
 	{
-		$this->${3:$2} = $${4:$2};
-		$${5:$2}->add${6:Method}($this);
+		$this->$2 = $$2;
+		$$2->add${3:Method}($this);
 	}
 
-	public function get${7:$1}()
+	public function get$1()
 	{
-		return $this->${8:$2};
+		return $this->$2;
 	}
-	${9}
+	${4}
 snippet ag
 	public function add${1:Attribute}($${2:attr})
 	{
-		$this->${3:$2}s[] = $${4:$2};
+		$this->$2s[] = $$2;
 	}
 
-	public function get${5:$1}s()
+	public function get$1s()
 	{
-		return $this->${6:$2}s;
+		return $this->$2s;
 	}
-	${7}
+	${3}
+#doctorine crap
+snippet entity
+	/** @Entity @Table(name="${1:tablename}") **/
+	class ${2:$1}
+	{
+		/** @Id @Column(type="integer", name="${3:id}") @GeneratedValue **/
+		protected $id;
+		${4}
+	}
+snippet column
+	/** @Column(type="${1:integer}", name="${2:columnname}", nullable=${3:true})  **/
+	protected $${4:$2};
+	${5}

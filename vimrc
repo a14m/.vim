@@ -54,6 +54,8 @@ nmap <leader>q :q<cr>
 " Fast editing of the .vimrc
 map <leader>e :e! ~/.vimrc<cr>
 
+"toggle folding
+nnoremap <space> za
 
 " Set 7 lines to the curors - when moving vertical..
 "set so=7
@@ -106,10 +108,10 @@ set ai
 set si 
 
 "indentation
-set expandtab
+"set softtabstop=4
+set tabstop=4
 set shiftwidth=4
-set softtabstop=4
-set tabstop=4           " use 4 spaces to represent tab
+set expandtab
 
 " set a vertical colomn at char 80
 "set colorcolumn=80
