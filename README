@@ -8,6 +8,6 @@ Create symlinks :
     ln -s ~/.vim/gvimrc ~/.gvimrc
 
 Initalizing Submodules Plugins :
-    cd ~/.vim/path/to/plugin
+    cd ~/.vim/
     git submodule init
     git submodule update
