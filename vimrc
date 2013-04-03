@@ -52,7 +52,8 @@ nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>
  
 " Fast editing of the .vimrc
-map <leader>e :e! ~/.vimrc<cr>
+"map <leader>e :vsp ~/.vimrc<cr>
+map <leader>e :vsp ~/.vim/ultisnips/php.snippets<cr>
 
 "toggle folding
 nnoremap <space> za
@@ -108,7 +109,7 @@ set ai
 set si 
 
 "indentation
-"set softtabstop=4
+set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -136,7 +137,7 @@ set omnifunc=pythoncomplete#Complete
 " => MISC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove the Windows ^M - when the encodings gets messed up
-nmap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+"nmap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 ""filetype options
 "================
@@ -180,7 +181,12 @@ nmap <leader>nt :NERDTreeToggle<cr>
 "nmap <leader>ntq :NERDTreeClose<cr>
 
 "SuperTab"
-"========
+"=========
+
+"UltiSnips"
+"==========
+"let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsSnippetsDir = "~/.vim/ultisnips"
 
 
 "python special configs"
