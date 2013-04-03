@@ -257,6 +257,134 @@ endsnippet
 # :vim:ft=snippets:
 
 ######################### My Custom Snippets #########################
-snippet sg "Description" !b
-my custom snippet
+# create doctrine2 entity class
+snippet entity "Creating Entity Class" b
+/** @Entity @Table(name="${1/.*/\l$0/}") **/
+class ${1:`!v Filename()`}
+{
+    /** @Id @Column(type="integer", name="${2:id}") @GeneratedValue **/
+    protected $id;
+
+    ${3}
+}
+endsnippet
+
+#generate doctorine column documntation with variable
+snippet col "Create Column Documntation with variable and setter and getter" b
+/** @Column(type="${1:integer}", name="${2:columnname}", nullable=${3:true})  **/
+protected $${4:$2};
+${5}
+endsnippet
+
+#generate setter getter
+snippet sg "Create Setter and Getter" b
+public function set${1/.*/\u$0/}($${1:attr})
+{
+    $this->$1 = $$1;
+}
+
+public function get${1/.*/\u$0/}()
+{
+    return $this->$1;
+}
+${2}
+endsnippet
+#generate setter adder getter
+snippet sag "Create Setter with AddMethod  and Getter" b
+public function set${1/.*/\u$0/}($${1:attr})
+{
+    $this->$1 = $$1;
+    $$1->add${2:Method}($this);
+}
+
+public function get${1/.*/\u$0/}()
+{
+    return $this->$1;
+}
+${3}
+endsnippet
+#generate adder getter
+snippet ag "Create AddMethod  and Getter" b
+public function add${1/.*/\u$0/}($${1:attr})
+{
+    $this->$1s[] = $$1;
+}
+
+public function get${1/.*/\u$0/}s()
+{
+    return $this->$1s;
+}
+${2}
+endsnippet
+snippet m21 "Create ManyToOne Relation" b
+/**
+ * @ManyToOne(targetEntity="${1:Entity}", inversedBy="${2:var}s") 
+ * @joinColumn(name="${3:column}", referencedColumnName="${4:id}", 
+ * nullable=${5:false})
+ */
+protected $${6:attr};
+
+public function set${6/.*/\u$0/}($$6)
+{
+    $this->$6 = $$6;
+    $$6->add${2/.*/\u$0/}($this);
+}
+
+public function get${6/.*/\u$0/}()
+{
+    return $this->$6;
+}
+
+//TODO add intialization to this var in $1.php __construct()
+$$2 = new ArrayCollection();
+//TODO copy this to $1.php
+/**
+ * @OneToMany(targetEntity="`!v Filename()`", mappedBy="$6")
+ **/
+protected $$2s = null;
+
+public function add${2/.*/\u$0/}($$2)
+{
+    $this->$2s[] = $$2;
+}
+
+public function get${2/.*/\u$0/}s()
+{
+    return $this->$2s;
+}
+//TODO end of $1.php code
+endsnippet
+snippet ut "Create UnitTestClass" b
+	<?php
+	require_once 'bootstrap.php';
+
+	class ${1:`!v Filename()`} extends PHPUnit_Framework_TestCase
+	{
+		protected $createdObjects;
+		public function setUp()
+		{
+			$this->createdObjects = array();
+		}
+
+		public function testCase1()
+		{
+			global $entityManager;
+			${2}
+		}
+
+		public function tearDown()
+		{
+			global $entityManager;
+			foreach ($this->createdObjects as $e) {
+				$entityManager->remove($e);
+			}
+			$entityManager->flush();
+		}
+	}
+endsnippet
+#persist entity manager entity and add it to the created objects
+snippet per "Persist and Add to the created Objects
+	$entityManager->persist(${1:entity});
+	$createdObjects[] = $1;
+	${2}
 endsnippet
