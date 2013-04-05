@@ -149,7 +149,10 @@ set omnifunc=pythoncomplete#Complete
 ":hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 ":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 ":nnoremap <leader>cc :set cursorline!<CR>
-
+"au WinLeave * set nocursorline nocursorcolumn
+"au WinEnter * set cursorline cursorcolumn
+"set cursorline cursorcolumn
+:nnoremap <leader>HC :set cursorcolumn!<CR>
 
 "Easier window movement"
 "=======================
