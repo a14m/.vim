@@ -106,18 +106,17 @@ class ${1:`!v Filename()`} extends PHPUnit_Framework_TestCase
 
     public static function getMinimal()
     {
-        global $entityManager;
-        ${2}
+        global $entityManager,$createdObjects;
     }
 
     public function testCase1()
     {
-        global $entityManager;
+        global $entityManager,$createdObjects;
     }
 
     public function tearDown()
     {
-        global $entityManager;
+        global $entityManager,$createdObjects;
         foreach ($createdObjects as $e) {
             $entityManager->remove($e);
         }
