@@ -70,15 +70,49 @@ public function get${5/.*/\u$0/}()
 }
 
 endsnippet
+snippet m212d "Create ManyToOne Relation bidirectional" b
+/**
+ * @ManyToOne(targetEntity="${1:Entity}", inversedBy="${2:invAttr}s") 
+ * @joinColumn(name="${3:column}", referencedColumnName="${4:id}", 
+ * nullable=${5:false})
+ */
+protected $${6:attr};
+
+public function set${6/.*/\u$0/}($$6)
+{
+    $$6->add${2/.*/\u$0/}($this);
+    $this->$6 = $$6;
+}
+
+public function get${6/.*/\u$0/}()
+{
+    return $this->$6;
+}
+//TODO START OF COPYING BLOCK TO $1.php
+//add the next line to the __construct()
+    $this->$2s = new ArrayCollection();
+
+//add the attr with his setters and getters
+/** @OneToMany(targetEntity="`!v Filename()`", mappedBy="$6")**/
+protected $$2s = null;
+
+public function add${2/.*/\u$0/}($$2)
+{
+    $this->$2s[] = $$2;
+}
+
+public function get${2/.*/\u$0/}s()
+{
+    return $this->$2s;
+}
+//TODO END OF COPYING BLOCK
+endsnippet
 snippet gm "getMinimal()" b
 public static function getMinimal()
 {
     global $entityManager,$createdObjects;
     $0
 }
-endsnippet
-snippet gmi "add CLASS::getMinimal" 
-`!v Filename()`::getMinimal();$0
 endsnippet
 #persist entity manager entity and add it to the created objects
 snippet per "Persist and Add to the created Objects" b
