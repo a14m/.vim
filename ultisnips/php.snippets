@@ -19,8 +19,8 @@ endsnippet
 
 #generate doctorine column documntation with variable
 snippet colsg "Create Column Documntation with variable and setter and getter" b
-/** @Column(type="${1:integer}", name="${2:columnname}", nullable=${3:true})  **/
-protected $${4:$2};
+/** @Column(type="${1:integer}", name="${4/.*/\L$0\E/}", nullable=${3:true})  **/
+protected $${4:attr};
 
 public function set${4/.*/\u$0/}($$4)
 {
@@ -34,8 +34,8 @@ public function get${4/.*/\u$0/}()
 ${5}
 endsnippet
 snippet col "Create Column Documntation " b
-/** @Column(type="${1:integer}", name="${2:columnname}", nullable=${3:true})  **/
-protected $${4:$2};
+/** @Column(type="${1:integer}", name="${4/.*/\L$0\E/}", nullable=${3:true})  **/
+protected $${4:attribute};
 endsnippet
 
 #generate setter getter
@@ -107,13 +107,6 @@ public function get${2/.*/\u$0/}s()
 }
 //TODO END OF COPYING BLOCK
 endsnippet
-snippet gm "getMinimal()" b
-public static function getMinimal()
-{
-    global $entityManager,$createdObjects;
-    $0
-}
-endsnippet
 #persist entity manager entity and add it to the created objects
 snippet per "Persist and Add to the created Objects" b
 $entityManager->persist($${1:entity});
@@ -122,7 +115,6 @@ ${2}
 endsnippet
 snippet perfl "Persist and Add to the created Objects" b
 $entityManager->persist($${1:entity});
-$createdObjects[] = $$1;
 $entityManager->flush();
 ${2}
 endsnippet
