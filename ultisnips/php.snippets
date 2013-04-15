@@ -3,7 +3,6 @@ snippet php "create php tags" b
 <?php
 
 $0
-?>
 endsnippet
 # create doctrine2 entity class
 snippet entity "Creating Entity Class" b
@@ -22,6 +21,8 @@ snippet colsg "Create Column Documntation with variable and setter and getter" b
 /** @Column(type="${1:integer}", name="${4/.*/\L$0\E/}", nullable=${3:true})  **/
 protected $${4:attr};
 
+${5}
+
 public function set${4/.*/\u$0/}($$4)
 {
     $this->$4 = $$4;
@@ -31,7 +32,6 @@ public function get${4/.*/\u$0/}()
 {
     return $this->$4;
 }
-${5}
 endsnippet
 snippet col "Create Column Documntation " b
 /** @Column(type="${1:integer}", name="${4/.*/\L$0\E/}", nullable=${3:true})  **/
@@ -59,6 +59,8 @@ snippet m21 "Create ManyToOne Relation" b
  */
 protected $${5:attr};
 
+${6}
+
 public function set${5/.*/\u$0/}($$5)
 {
     $this->$5 = $$5;
@@ -68,7 +70,6 @@ public function get${5/.*/\u$0/}()
 {
     return $this->$5;
 }
-
 endsnippet
 snippet m212d "Create ManyToOne Relation bidirectional" b
 /**
@@ -88,6 +89,7 @@ public function get${6/.*/\u$0/}()
 {
     return $this->$6;
 }
+${7}
 //TODO START OF COPYING BLOCK TO $1.php
 //add the next line to the __construct()
     $this->$2s = new ArrayCollection();

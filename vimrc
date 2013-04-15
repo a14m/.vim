@@ -183,8 +183,13 @@ nmap <leader>nt :NERDTreeToggle<cr>
 "cmap ntf NERDTreeFind<cr>
 "nmap <leader>ntq :NERDTreeClose<cr>
 
+"auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
+inoremap <Nul> <C-x><C-o>
+
 "SuperTab"
 "=========
+"let g:SuperTabMappingForward = '<c-space>'
+"let g:SuperTabMappingBackward = '<s-c-space>'
 
 "UltiSnips"
 "==========
@@ -203,6 +208,3 @@ set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
 " More syntax highlighting.
 let python_highlight_all = 1
-
-"auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
-inoremap <Nul> <C-x><C-o>
