@@ -1,0 +1,10 @@
+#enable the terminal colors
+export CLICOLOR=1
+
+#the default color scheme is "exfxcxdxbxegedabagacad"
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
+#edit the root shell prompt
+export SUDO_PS1="\[\e[33;0;41m\][\u] \w \$\[\e[0m\] "
+
+alias arwa="cd ~/Vagrant/phpdevbox/www/theguide-erp/"
