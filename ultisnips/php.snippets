@@ -12,6 +12,10 @@ class ${1:`!v Filename()`}
     /** @Id @Column(type="integer", name="${2:id}") @GeneratedValue **/
     protected $id;
 
+    public function getId()
+    {
+        return $this->id;
+    }
     ${3}
 }
 endsnippet
@@ -21,9 +25,7 @@ snippet colsg "Create Column Documntation with variable and setter and getter" b
 /** @Column(type="${1:integer}", name="${4/.*/\L$0\E/}", nullable=${3:true})  **/
 protected $${4:attr};
 
-${5}
-
-public function set${4/.*/\u$0/}($$4)
+${5}public function set${4/.*/\u$0/}($$4)
 {
     $this->$4 = $$4;
 }
@@ -57,11 +59,9 @@ snippet m21 "Create ManyToOne Relation" b
  * @joinColumn(name="${2:column}", referencedColumnName="${3:id}", 
  * nullable=${4:false})
  */
-protected $${5:attr};
+protected $${5:$2};
 
-${6}
-
-public function set${5/.*/\u$0/}($$5)
+${6}public function set${5/.*/\u$0/}($$5)
 {
     $this->$5 = $$5;
 }
@@ -77,7 +77,7 @@ snippet m212d "Create ManyToOne Relation bidirectional" b
  * @joinColumn(name="${3:column}", referencedColumnName="${4:id}", 
  * nullable=${5:false})
  */
-protected $${6:attr};
+protected $${6:$3};
 
 public function set${6/.*/\u$0/}($$6)
 {
@@ -112,13 +112,18 @@ endsnippet
 #persist entity manager entity and add it to the created objects
 snippet per "Persist and Add to the created Objects" b
 $entityManager->persist($${1:entity});
-$createdObjects[] = $$1;
 ${2}
 endsnippet
 snippet perfl "Persist and Add to the created Objects" b
 $entityManager->persist($${1:entity});
 $entityManager->flush();
 ${2}
+endsnippet
+snippet co "add persist flush and add to created ojects" b
+$entityManager->persist($${1:entity});
+$entityManager->flush();
+$createdObjects[] = $$1;
+return $$1;
 endsnippet
 snippet ut "Create UnitTestClass" b
 <?php
@@ -139,7 +144,7 @@ class ${1:`!v Filename()`} extends PHPUnit_Framework_TestCase
 
     public function testCase1()
     {
-        global $entityManager,$createdObjects;
+        global $entityManager;
     }
 
     public function tearDown()
