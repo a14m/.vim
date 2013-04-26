@@ -5,6 +5,21 @@ export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
 #edit the root shell prompt
-export SUDO_PS1="\[\e[33;0;41m\][\u] \w \$\[\e[0m\] "
+#export SUDO_PS1="\[\e[33;0;41m\][\u] \w \$\[\e[0m\] "
 
 alias arwa="cd ~/Vagrant/phpdevbox/www/theguide-erp/"
+
+#adding brew python to the PATH
+export PATH=$PATH:/usr/local/share/python
+
+# virtualenv should use Distribute instead of legacy setuptools
+export VIRTUALENV_DISTRIBUTE=true
+
+# Centralized location for new virtual environments
+export PIP_VIRTUALENV_BASE=$HOME/Vagrant/virtualenvs
+
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+
+# cache pip-installed packages to avoid re-downloading
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
