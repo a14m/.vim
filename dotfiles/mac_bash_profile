@@ -16,7 +16,7 @@ export PATH=$PATH:/usr/local/share/python
 export VIRTUALENV_DISTRIBUTE=true
 
 # Centralized location for new virtual environments
-export PIP_VIRTUALENV_BASE=$HOME/Vagrant/virtualenvs
+export PIP_VIRTUALENV_BASE=$HOME/Venvs
 
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
