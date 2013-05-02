@@ -8,6 +8,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 #export SUDO_PS1="\[\e[33;0;41m\][\u] \w \$\[\e[0m\] "
 
 alias arwa="cd ~/Vagrant/phpdevbox/www/theguide-erp/"
+alias gpn="cd ~/Documents/Programming\ Workspace/Android\ Workspace/"
 
 #adding brew python to the PATH
 export PATH=$PATH:/usr/local/share/python
