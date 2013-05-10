@@ -1,5 +1,9 @@
+:filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+syntax on
+:filetype plugin indent on
+
 
 let mapleader = ';' " define map leader
 
@@ -19,8 +23,6 @@ colorscheme xoria256
 
 " Sets how many lines of history VIM has to remember
 " set history=700
-
-syntax on
 
 " display incomplete commands
 set showcmd         
@@ -43,6 +45,8 @@ set wildignore=*.o,*~,*.pyc
 
 cmap :Wq :wq
 cmap :WQ :wq
+" Override System READONLY files using w!!
+cmap w!! %!sudo tee > /dev/null %
 
 
 " Fast saving
@@ -139,11 +143,6 @@ set omnifunc=pythoncomplete#Complete
 " Remove the Windows ^M - when the encodings gets messed up
 "nmap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-""filetype options
-"================
-:filetype on
-:filetype plugin on
-
 "highlight curser line
 "=====================
 ":hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
@@ -161,10 +160,10 @@ nmap <silent> <leader>j :wincmd j<CR>
 nmap <silent> <leader>k :wincmd k<CR>
 nmap <silent> <leader>l :wincmd l<CR>
 nmap <silent> <leader>sb :wincmd p<CR>
-nmap <silent> <leader>cj :wincmd j<CR>:close<CR>
-nmap <silent> <leader>ck :wincmd k<CR>:close<CR>
-nmap <silent> <leader>ch :wincmd h<CR>:close<CR>
-nmap <silent> <leader>cl :wincmd l<CR>:close<CR>
+"nmap <silent> <leader>cj :wincmd j<CR>:close<CR>
+"nmap <silent> <leader>ck :wincmd k<CR>:close<CR>
+"nmap <silent> <leader>ch :wincmd h<CR>:close<CR>
+"nmap <silent> <leader>cl :wincmd l<CR>:close<CR>
 "noremap <silent> <leader>cc :close<CR>
 "noremap <silent> <leader>cw :cclose<CR>
 nmap <silent> <leader>ml <C-W>L
@@ -184,7 +183,7 @@ nmap <leader>nt :NERDTreeToggle<cr>
 "nmap <leader>ntq :NERDTreeClose<cr>
 
 "auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
-inoremap <Nul> <C-x><C-o>
+"inoremap <Nul> <C-x><C-o>
 
 "SuperTab"
 "=========

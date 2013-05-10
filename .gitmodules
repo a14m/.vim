@@ -19,3 +19,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = git://github.com/vim-scripts/bufexplorer.zip.git
