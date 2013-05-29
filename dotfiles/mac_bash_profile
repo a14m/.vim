@@ -1,3 +1,6 @@
+# Disable press-and-hold for keys in favor of key repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 #enable the terminal colors
 export CLICOLOR=1
 
@@ -24,3 +27,4 @@ export PIP_REQUIRE_VIRTUALENV=true
 
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
