@@ -6,12 +6,14 @@ Create symlinks :
     
     ln -s ~/.vim/dotfiles/vimrc ~/.vimrc
     ln -s ~/.vim/dotfiles/gvimrc ~/.gvimrc
+    ln -s ~/.vim/dotfiles/gitconfig ~/.gitconfig
 
 Add the appropriate .bash on the machine :
 
     MAC OS X :
         ln -s ~/.vim/dotfiles/mac_bash_profile ~/.bash_profile
-    Linux ( vagrant , ubuntu_home , etc.)
+
+    Linux ( vagrant , ubuntu_home , etc.) :
         ln -s ~/.vim/dotfiles/filename ~/.bashrc 
 
 Initalizing Submodules Plugins :
