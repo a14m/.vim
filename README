@@ -11,7 +11,7 @@ Create symlinks :
 Add the appropriate .bash on the machine :
 
     MAC OS X :
-        ln -s ~/.vim/dotfiles/mac_bash_profile ~/.bash_profile
+        ln -s ~/.vim/dotfiles/bash_profile ~/.bash_profile
 
     Linux ( vagrant , ubuntu_home , etc.) :
         ln -s ~/.vim/dotfiles/filename ~/.bashrc 

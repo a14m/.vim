@@ -12,6 +12,8 @@
 	email = eng.abdelrazzak@gmail.com
 [branch]
 	autosetuprebase = always
+[diff]
+	algorithm = patience
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -22,8 +24,11 @@
 	st = status
 	br = branch
 	df = diff
-    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-    fl = log -u
-    ldf = diff --cached HEAD^
+    assume   = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+    #ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    #ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    #ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    #fl = log -u
+    #ldf = diff --cached HEAD^
