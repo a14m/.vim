@@ -45,6 +45,10 @@ set wildignore=*.o,*~,*.pyc
 
 cmap :Wq :wq
 cmap :WQ :wq
+
+"move in lines as you see them not as they are wrapped
+map j gj
+map k gk
 " Override System READONLY files using w!!
 cmap w!! %!sudo tee > /dev/null %
 
@@ -56,8 +60,8 @@ nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>
  
 " Fast editing of the .vimrc
-"map <leader>e :vsp ~/.vimrc<cr>
-map <leader>e :vsp ~/.vim/ultisnips/php.snippets<cr>
+map <leader>e :vsp ~/.vimrc<cr>
+"map <leader>e :vsp ~/.vim/ultisnips/php.snippets<cr>
 
 "toggle folding
 nnoremap <space> za
@@ -125,7 +129,7 @@ set expandtab
 set wrap
 
 "set visiual bell
-set vb
+"set vb
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -151,7 +155,7 @@ set omnifunc=pythoncomplete#Complete
 "au WinLeave * set nocursorline nocursorcolumn
 "au WinEnter * set cursorline cursorcolumn
 "set cursorline cursorcolumn
-:nnoremap <leader>HC :set cursorcolumn!<CR>
+":nnoremap <leader>HC :set cursorcolumn!<CR>
 
 "Easier window movement"
 "=======================
@@ -159,7 +163,7 @@ nmap <silent> <leader>h :wincmd h<CR>
 nmap <silent> <leader>j :wincmd j<CR>
 nmap <silent> <leader>k :wincmd k<CR>
 nmap <silent> <leader>l :wincmd l<CR>
-nmap <silent> <leader>sb :wincmd p<CR>
+"nmap <silent> <leader>p :wincmd p<CR>
 "nmap <silent> <leader>cj :wincmd j<CR>:close<CR>
 "nmap <silent> <leader>ck :wincmd k<CR>:close<CR>
 "nmap <silent> <leader>ch :wincmd h<CR>:close<CR>
@@ -183,7 +187,7 @@ nmap <leader>nt :NERDTreeToggle<cr>
 "nmap <leader>ntq :NERDTreeClose<cr>
 
 "auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
-"inoremap <Nul> <C-x><C-o>
+inoremap <Nul> <C-x><C-o>
 
 "SuperTab"
 "=========
@@ -202,8 +206,8 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "python special configs"
 "========
 " Use :make to see syntax errors. (:cn and :cp to move around, :dist to see all errors)
-set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
-set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+"set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
+"set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
 " More syntax highlighting.
 let python_highlight_all = 1
