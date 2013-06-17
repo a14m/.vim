@@ -6,6 +6,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 
 alias arwa="cd ~/Vagrant/phpdevbox/www/theguide-erp/"
 alias aws="cd ~/Documents/Programming\ Workspace/Android\ Workspace/"
+alias pws="cd ~/Vagrant/python/www/twitter/"
 
 #adding brew python to the PATH
 export PATH=$PATH:/usr/local/share/python
@@ -20,4 +21,4 @@ export PATH=$PATH:/usr/local/share/python
 #export PIP_REQUIRE_VIRTUALENV=true
 
 # cache pip-installed packages to avoid re-downloading
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+#export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
