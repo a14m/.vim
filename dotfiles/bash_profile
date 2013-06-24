@@ -4,9 +4,10 @@ export CLICOLOR=1
 #the default color scheme is "exfxcxdxbxegedabagacad"
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
-alias arwa="cd ~/Vagrant/phpdevbox/www/theguide-erp/"
+alias arwa="cd ~/Vagrant/phpdevbox/www/theguide/"
 alias aws="cd ~/Documents/Programming\ Workspace/Android\ Workspace/"
 alias pws="cd ~/Vagrant/python/www/twitter/"
+alias sws="cd ~/Downloads/Courses/Startup\ Engineering/Workspace/"
 
 #adding brew python to the PATH
 export PATH=$PATH:/usr/local/share/python
@@ -22,3 +23,6 @@ export PATH=$PATH:/usr/local/share/python
 
 # cache pip-installed packages to avoid re-downloading
 #export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

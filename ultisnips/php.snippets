@@ -1,159 +1,159 @@
-######################### My Custom Snippets #########################
-snippet php "create php tags" b
-<?php
+########################## My Custom Snippets #########################
+#snippet php "create php tags" b
+#<?php
 
-$0
-endsnippet
-# create doctrine2 entity class
-snippet entity "Creating Entity Class" b
-/** @Entity @Table(name="${1/.*/\l$0/}") **/
-class ${1:`!v Filename()`}
-{
-    /** @Id @Column(type="integer", name="${2:id}") @GeneratedValue **/
-    protected $id;
+#$0
+#endsnippet
+## create doctrine2 entity class
+#snippet entity "Creating Entity Class" b
+#/** @Entity @Table(name="${1/.*/\l$0/}") **/
+#class ${1:`!v Filename()`}
+#{
+    #/** @Id @Column(type="integer", name="${2:id}") @GeneratedValue **/
+    #protected $id;
 
-    public function getId()
-    {
-        return $this->id;
-    }
-    ${3}
-}
-endsnippet
+    #public function getId()
+    #{
+        #return $this->id;
+    #}
+    #${3}
+#}
+#endsnippet
 
-#generate doctorine column documntation with variable
-snippet colsg "Create Column Documntation with variable and setter and getter" b
-/** @Column(type="${1:integer}", name="${4/.*/\L$0\E/}", nullable=${3:true})  **/
-protected $${4:attr};
+##generate doctorine column documntation with variable
+#snippet colsg "Create Column Documntation with variable and setter and getter" b
+#/** @Column(type="${1:integer}", name="${4/.*/\L$0\E/}", nullable=${3:true})  **/
+#protected $${4:attr};
 
-${5}public function set${4/.*/\u$0/}($$4)
-{
-    $this->$4 = $$4;
-}
+#${5}public function set${4/.*/\u$0/}($$4)
+#{
+    #$this->$4 = $$4;
+#}
 
-public function get${4/.*/\u$0/}()
-{
-    return $this->$4;
-}
-endsnippet
-snippet col "Create Column Documntation " b
-/** @Column(type="${1:integer}", name="${4/.*/\L$0\E/}", nullable=${3:true})  **/
-protected $${4:attribute};
-endsnippet
+#public function get${4/.*/\u$0/}()
+#{
+    #return $this->$4;
+#}
+#endsnippet
+#snippet col "Create Column Documntation " b
+#/** @Column(type="${1:integer}", name="${4/.*/\L$0\E/}", nullable=${3:true})  **/
+#protected $${4:attribute};
+#endsnippet
 
-#generate setter getter
-snippet sg "Create Setter and Getter" b
-public function set${1/.*/\u$0/}($${1:attr})
-{
-    $this->$1 = $$1;
-}
+##generate setter getter
+#snippet sg "Create Setter and Getter" b
+#public function set${1/.*/\u$0/}($${1:attr})
+#{
+    #$this->$1 = $$1;
+#}
 
-public function get${1/.*/\u$0/}()
-{
-    return $this->$1;
-}
-${2}
-endsnippet
-snippet m21 "Create ManyToOne Relation" b
-/**
- * @ManyToOne(targetEntity="${1:Entity}") 
- * @joinColumn(name="${2:column}", referencedColumnName="${3:id}", 
- * nullable=${4:false})
- */
-protected $${5:$2};
+#public function get${1/.*/\u$0/}()
+#{
+    #return $this->$1;
+#}
+#${2}
+#endsnippet
+#snippet m21 "Create ManyToOne Relation" b
+#/**
+ #* @ManyToOne(targetEntity="${1:Entity}") 
+ #* @joinColumn(name="${2:column}", referencedColumnName="${3:id}", 
+ #* nullable=${4:false})
+ #*/
+#protected $${5:$2};
 
-${6}public function set${5/.*/\u$0/}($$5)
-{
-    $this->$5 = $$5;
-}
+#${6}public function set${5/.*/\u$0/}($$5)
+#{
+    #$this->$5 = $$5;
+#}
 
-public function get${5/.*/\u$0/}()
-{
-    return $this->$5;
-}
-endsnippet
-snippet m212d "Create ManyToOne Relation bidirectional" b
-/**
- * @ManyToOne(targetEntity="${1:Entity}", inversedBy="${2:invAttr}s") 
- * @joinColumn(name="${3:column}", referencedColumnName="${4:id}", 
- * nullable=${5:false})
- */
-protected $${6:$3};
+#public function get${5/.*/\u$0/}()
+#{
+    #return $this->$5;
+#}
+#endsnippet
+#snippet m212d "Create ManyToOne Relation bidirectional" b
+#/**
+ #* @ManyToOne(targetEntity="${1:Entity}", inversedBy="${2:invAttr}s") 
+ #* @joinColumn(name="${3:column}", referencedColumnName="${4:id}", 
+ #* nullable=${5:false})
+ #*/
+#protected $${6:$3};
 
-public function set${6/.*/\u$0/}($$6)
-{
-    $$6->add${2/.*/\u$0/}($this);
-    $this->$6 = $$6;
-}
+#public function set${6/.*/\u$0/}($$6)
+#{
+    #$$6->add${2/.*/\u$0/}($this);
+    #$this->$6 = $$6;
+#}
 
-public function get${6/.*/\u$0/}()
-{
-    return $this->$6;
-}
-${7}
-//TODO START OF COPYING BLOCK TO $1.php
-//add the next line to the __construct()
-    $this->$2s = new ArrayCollection();
+#public function get${6/.*/\u$0/}()
+#{
+    #return $this->$6;
+#}
+#${7}
+#//TODO START OF COPYING BLOCK TO $1.php
+#//add the next line to the __construct()
+    #$this->$2s = new ArrayCollection();
 
-//add the attr with his setters and getters
-/** @OneToMany(targetEntity="`!v Filename()`", mappedBy="$6")**/
-protected $$2s = null;
+#//add the attr with his setters and getters
+#/** @OneToMany(targetEntity="`!v Filename()`", mappedBy="$6")**/
+#protected $$2s = null;
 
-public function add${2/.*/\u$0/}($$2)
-{
-    $this->$2s[] = $$2;
-}
+#public function add${2/.*/\u$0/}($$2)
+#{
+    #$this->$2s[] = $$2;
+#}
 
-public function get${2/.*/\u$0/}s()
-{
-    return $this->$2s;
-}
-//TODO END OF COPYING BLOCK
-endsnippet
-#persist entity manager entity and add it to the created objects
-snippet per "Persist and Add to the created Objects" b
-$entityManager->persist($${1:entity});
-${2}
-endsnippet
-snippet perfl "Persist and Add to the created Objects" b
-$entityManager->persist($${1:entity});
-$entityManager->flush();
-${2}
-endsnippet
-snippet co "add persist flush and add to created ojects" b
-$entityManager->persist($${1:entity});
-$entityManager->flush();
-$createdObjects[] = $$1;
-return $$1;
-endsnippet
-snippet ut "Create UnitTestClass" b
-<?php
-require_once 'bootstrap.php';
+#public function get${2/.*/\u$0/}s()
+#{
+    #return $this->$2s;
+#}
+#//TODO END OF COPYING BLOCK
+#endsnippet
+##persist entity manager entity and add it to the created objects
+#snippet per "Persist and Add to the created Objects" b
+#$entityManager->persist($${1:entity});
+#${2}
+#endsnippet
+#snippet perfl "Persist and Add to the created Objects" b
+#$entityManager->persist($${1:entity});
+#$entityManager->flush();
+#${2}
+#endsnippet
+#snippet co "add persist flush and add to created ojects" b
+#$entityManager->persist($${1:entity});
+#$entityManager->flush();
+#$createdObjects[] = $$1;
+#return $$1;
+#endsnippet
+#snippet ut "Create UnitTestClass" b
+#<?php
+#require_once 'bootstrap.php';
 
-class ${1:`!v Filename()`} extends PHPUnit_Framework_TestCase
-{
-    public function setUp()
-    {
-        global $createdObjects;
-        $createdObjects = array();
-    }
+#class ${1:`!v Filename()`} extends PHPUnit_Framework_TestCase
+#{
+    #public function setUp()
+    #{
+        #global $createdObjects;
+        #$createdObjects = array();
+    #}
 
-    public static function getMinimal()
-    {
-        global $entityManager,$createdObjects;
-    }
+    #public static function getMinimal()
+    #{
+        #global $entityManager,$createdObjects;
+    #}
 
-    public function testCase1()
-    {
-        global $entityManager;
-    }
+    #public function testCase1()
+    #{
+        #global $entityManager;
+    #}
 
-    public function tearDown()
-    {
-        global $entityManager,$createdObjects;
-        foreach ($createdObjects as $e) {
-            $entityManager->remove($e);
-        }
-        $entityManager->flush();
-    }
-}
-endsnippet
+    #public function tearDown()
+    #{
+        #global $entityManager,$createdObjects;
+        #foreach ($createdObjects as $e) {
+            #$entityManager->remove($e);
+        #}
+        #$entityManager->flush();
+    #}
+#}
+#endsnippet
