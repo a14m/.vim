@@ -43,24 +43,25 @@ set wildignore=*.o,*~,*.pyc
 " don't jump to first character when paging
 "set nostartofline   
 
-cmap :Wq :wq
-cmap :WQ :wq
 
 "move in lines as you see them not as they are wrapped
 map j gj
 map k gk
-" Override System READONLY files using w!!
-cmap w!! %!sudo tee > /dev/null %
+
 
 
 " Fast saving
 nmap <leader>w :w!<cr>
+" Override System READONLY files using w!!
+cmap w!! %!sudo tee > /dev/null %
 
 " Fast quiting
 nmap <leader>q :q<cr>
+cmap :Wq :wq
+cmap :WQ :wq
  
 " Fast editing of the .vimrc
-map <leader>e :vsp ~/.vimrc<cr>
+"map <leader>e :vsp ~/.vimrc<cr>
 "map <leader>e :vsp ~/.vim/ultisnips/php.snippets<cr>
 
 "toggle folding
@@ -129,7 +130,7 @@ set expandtab
 set wrap
 
 "set visiual bell
-"set vb
+set vb
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
