@@ -1,11 +1,10 @@
-Installation :
+testInstallation :
 
     git clone git@github.com:artmees/dotvim.git ~/.vim
 
 Create symlinks :
     
     ln -s ~/.vim/dotfiles/vimrc ~/.vimrc
-    ln -s ~/.vim/dotfiles/gvimrc ~/.gvimrc
     ln -s ~/.vim/dotfiles/gitconfig ~/.gitconfig
 
 Add the appropriate .bash on the machine :
