@@ -1,4 +1,4 @@
-testInstallation :
+Installation :
 
     git clone git@github.com:artmees/dotvim.git ~/.vim
 
