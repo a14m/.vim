@@ -4,6 +4,12 @@ snippet php "create php tags" b
 
 $0
 endsnippet
-snippet pp "create print_r() " b
+
+snippet pp "create print_r() "
 print_r($$0);
+endsnippet
+
+snippet field "create field config" b
+$$1 = array('name'=>'$2','type'=>'${3:TextField}',
+    'properties'=>array('blank'=>${4:false},'maxLength'=>$5));
 endsnippet
