@@ -32,3 +32,5 @@
     #ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
     #fl = log -u
     ldf = diff --cached HEAD^
+[push]
+    default = current
