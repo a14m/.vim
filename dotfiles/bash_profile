@@ -6,7 +6,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 
 alias arwa="cd ~/Vagrant/phpdevbox/www/theguide/"
 alias aws="cd ~/Documents/Programming\ Workspace/Android\ Workspace/"
-alias pws="cd ~/Vagrant/python/www/twitter/"
+alias pws="cd ~/Vagrant/python/www/"
 alias sws="cd ~/Downloads/Courses/Startup\ Engineering/Workspace/"
 
 #adding brew python to the PATH
