@@ -76,7 +76,7 @@ set wildmenu
 " Always show the status line
 set laststatus=2
 " Format the status line
-
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
 
 "Always show current position
 set ruler 
@@ -183,7 +183,8 @@ nmap <silent> <leader>mj <C-W>J
 
 "NerdTree"
 "=========
-nmap <leader>nt :NERDTreeToggle<cr>
+"nmap <leader>nt :NERDTreeToggle<cr>
+nmap <leader>nt :NERDTree<cr>
 "cmap ntf NERDTreeFind<cr>
 "nmap <leader>ntq :NERDTreeClose<cr>
 
