@@ -43,13 +43,6 @@ set wildignore=*.o,*~,*.pyc
 " don't jump to first character when paging
 "set nostartofline   
 
-
-"move in lines as you see them not as they are wrapped
-map j gj
-map k gk
-
-
-
 " Fast saving
 nmap <leader>w :w!<cr>
 " Override System READONLY files using w!!
@@ -176,6 +169,12 @@ nmap <silent> <leader>mk <C-W>K
 nmap <silent> <leader>mh <C-W>H
 nmap <silent> <leader>mj <C-W>J
 "noremap <silent> <leader>o <C-W>o
+
+"move in lines as you see them not as they are wrapped
+nmap j gj
+nmap k gk
+nmap > gv>
+nmap < gv<
 
 "==========="
 "Plugin maps"
