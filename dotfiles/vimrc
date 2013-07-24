@@ -173,8 +173,8 @@ nmap <silent> <leader>mj <C-W>J
 "move in lines as you see them not as they are wrapped
 nmap j gj
 nmap k gk
-nmap > gv>
-nmap < gv<
+"nmap > gv>
+"nmap < gv<
 
 "==========="
 "Plugin maps"
@@ -189,6 +189,11 @@ nmap <leader>nt :NERDTree<cr>
 
 "auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
 inoremap <Nul> <C-x><C-o>
+
+"BufExp"
+"======
+let g:bufExplorerShowRelativePath=1  " Show relative paths.
+let g:bufExplorerSortBy='fullpath'   " Sort by full file path name.
 
 "SuperTab"
 "=========
