@@ -8,8 +8,9 @@ syntax on
 let mapleader = ';' " define map leader
 
 "fix not copying between clipboard and vim
-vmap <leader>y :w !pbcopy<CR><CR>
 set clipboard=unnamed
+"not used any more but left if needed in the future
+"vmap <leader>y :w !pbcopy<CR><CR>
 
 "fix backspace not deleteing existing text
 set backspace=indent,eol,start 
@@ -46,7 +47,7 @@ set wildignore=*.o,*~,*.pyc
 " Fast saving
 nmap <leader>w :w!<cr>
 " Override System READONLY files using w!!
-cmap w!! %!sudo tee > /dev/null %
+"cmap w!! %!sudo tee > /dev/null %
 
 " Fast quiting
 nmap <leader>q :q<cr>
