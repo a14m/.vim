@@ -4,7 +4,6 @@ call pathogen#helptags()
 syntax on
 :filetype plugin indent on
 
-
 let mapleader = ';' " define map leader
 
 "fix not copying between clipboard and vim
@@ -38,6 +37,10 @@ set autoread
 " Ignore compiled files 
 set wildignore=*.o,*~,*.pyc
 
+"set the encoding to utf-8
+set encoding=utf-8
+
+
 " Abbreviate messages
 "set shortmess=atI   
 
@@ -70,7 +73,7 @@ set wildmenu
 " Always show the status line
 set laststatus=2
 " Format the status line
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
+"set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
 
 "Always show current position
 set ruler 
@@ -176,6 +179,7 @@ nmap j gj
 nmap k gk
 "nmap > gv>
 "nmap < gv<
+"
 
 "==========="
 "Plugin maps"
@@ -209,6 +213,20 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+"Vim-airline
+"===========
+let g:airline_theme='powerlineish'
+"branch parts
+"let g:airline_enable_branch=1
+"seperators
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
+"unused modes
+let g:airline_section_y=""
+let g:airline_section_gutter=""
+let g:airline_detect_whitespace=0
+set ttimeoutlen=50
+
 
 "python special configs"
 "========
@@ -217,4 +235,4 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
 " More syntax highlighting.
-let python_highlight_all = 1
+"let python_highlight_all = 1
