@@ -14,7 +14,7 @@ set clipboard=unnamed
 
 "fix backspace not deleteing existing text
 set backspace=indent,eol,start 
-set whichwrap+=<,>,h,l
+"set whichwrap+=<,>,h,l
 
 "set numbers column on the left
 set number
