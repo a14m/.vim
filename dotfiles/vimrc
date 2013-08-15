@@ -38,7 +38,7 @@ set autoread
 set wildignore=*.o,*~,*.pyc
 
 "set the encoding to utf-8
-"set encoding=utf-8
+set encoding=utf-8
 
 " Set 7 lines to the curors - when moving vertical..
 "set so=7
@@ -225,9 +225,16 @@ let g:airline_theme='powerlineish'
 let g:airline_section_y=""
 "let g:airline_section_gutter=""
 let g:airline_detect_whitespace=0
-"let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=1
 let g:airline_section_warning="syntastic"
 set ttimeoutlen=50
+
+"Syntastic plugin
+"================
+augroup mine
+    au BufWinEnter * sign define mysign
+    au BufWinEnter * exe "sign place 1337 line=1 name=mysign buffer=" . bufnr('%')
+augroup END
 
 
 "python special configs"
