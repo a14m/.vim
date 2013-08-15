@@ -38,31 +38,7 @@ set autoread
 set wildignore=*.o,*~,*.pyc
 
 "set the encoding to utf-8
-set encoding=utf-8
-
-
-" Abbreviate messages
-"set shortmess=atI   
-
-" don't jump to first character when paging
-"set nostartofline   
-
-" Fast saving
-nmap <leader>w :w!<cr>
-" Override System READONLY files using w!!
-"cmap w!! %!sudo tee > /dev/null %
-
-" Fast quiting
-nmap <leader>q :q<cr>
-cmap :Wq :wq
-cmap :WQ :wq
- 
-" Fast editing of the .vimrc
-"map <leader>e :vsp ~/.vimrc<cr>
-"map <leader>e :vsp ~/.vim/ultisnips/php.snippets<cr>
-
-"toggle folding
-nnoremap <space> za
+"set encoding=utf-8
 
 " Set 7 lines to the curors - when moving vertical..
 "set so=7
@@ -129,6 +105,11 @@ set wrap
 "set visiual bell
 set vb
 
+" Abbreviate messages
+"set shortmess=atI   
+
+" don't jump to first character when paging
+"set nostartofline   
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Omni complete functions
@@ -138,6 +119,25 @@ set omnifunc=htmlcomplete#CompleteTags
 set omnifunc=phpcomplete#CompletePHP
 set omnifunc=javascriptcomplete#CompleteJS
 set omnifunc=pythoncomplete#Complete
+
+
+" Fast saving
+nmap <leader>w :w!<cr>
+" Override System READONLY files using w!!
+"cmap w!! %!sudo tee > /dev/null %
+
+" Fast quiting
+nmap <leader>q :q<cr>
+cmap :Wq :wq
+cmap :WQ :wq
+ 
+" Fast editing of the .vimrc
+"map <leader>e :vsp ~/.vimrc<cr>
+"map <leader>e :vsp ~/.vim/ultisnips/php.snippets<cr>
+
+"toggle folding
+nnoremap <space> za
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => MISC
@@ -219,12 +219,13 @@ let g:airline_theme='powerlineish'
 "branch parts
 "let g:airline_enable_branch=1
 "seperators
-"let g:airline_left_sep = ''
-"let g:airline_right_sep = ''
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '◀'
 "unused modes
 let g:airline_section_y=""
-let g:airline_section_gutter=""
+"let g:airline_section_gutter=""
 let g:airline_detect_whitespace=0
+"let g:airline_powerline_fonts=1
 set ttimeoutlen=50
 
 
