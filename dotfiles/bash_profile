@@ -12,6 +12,7 @@ alias sws="cd ~/Downloads/Courses/Startup\ Engineering/Workspace/"
 
 #grep alias to enable coloring all the time
 alias grep='grep --color=auto'
+alias la='ls -a'
 
 #adding brew python to the PATH
 export PATH=$PATH:/usr/local/share/python
