@@ -225,7 +225,6 @@ let g:airline_theme='powerlineish'
 let g:airline_section_y=""
 "let g:airline_section_gutter=""
 let g:airline_detect_whitespace=0
-let g:airline_section_warning="syntastic"
 set ttimeoutlen=50
 
 "Syntastic plugin
