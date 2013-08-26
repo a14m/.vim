@@ -122,7 +122,7 @@ set omnifunc=pythoncomplete#Complete
 
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap <leader>w :w<cr>
 " Override System READONLY files using w!!
 "cmap w!! %!sudo tee > /dev/null %
 
@@ -233,7 +233,9 @@ augroup mine
     au BufWinEnter * sign define mysign
     au BufWinEnter * exe "sign place 1337 line=1 name=mysign buffer=" . bufnr('%')
 augroup END
-
+let g:syntastic_mode_map={ 'mode': 'active',
+                     \ 'active_filetypes': [],
+                     \ 'passive_filetypes': ['html'] }
 
 "python special configs"
 "========
