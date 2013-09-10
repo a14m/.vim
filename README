@@ -12,8 +12,11 @@ Add the appropriate .bash on the machine :
     MAC OS X :
         ln -s ~/.vim/dotfiles/bash_profile ~/.bash_profile
 
-    Linux ( vagrant , ubuntu_home , etc.) :
+    Linux ( ubuntu_home , etc.) :
         ln -s ~/.vim/dotfiles/filename ~/.bashrc 
+    
+    Vagrant :
+        ln -s ~/.vim/dotfiles/vagrant_bashrc ~/.bashrc 
 
 Initalizing Submodules Plugins :
 
