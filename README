@@ -16,7 +16,7 @@ Add the appropriate .bash on the machine :
         ln -s ~/.vim/dotfiles/filename ~/.bashrc 
     
     Vagrant :
-        ln -s ~/.vim/dotfiles/vagrant_bashrc ~/.bashrc 
+        run the `configure_vagrant.sh` script
 
 Initalizing Submodules Plugins :
 
