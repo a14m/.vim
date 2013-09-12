@@ -27,6 +27,7 @@
 ##install mysql
 #sudo apt-get install mysql-server -y
 #sudo apt-get install php5-mysql -y
+#sudo apt-get install libmysqlclient-dev python-dev
 
 ##install python virtualenv and pip
 #mkdir ~/.virtualenv
