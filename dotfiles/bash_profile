@@ -10,8 +10,7 @@ export HISTSIZE=2000
 #aliases to easy change the most working directories
 alias arwa="cd ~/Vagrant/phpdevbox/www/theguide/"
 alias aws="cd ~/Documents/Programming\ Workspace/Android\ Workspace/"
-alias pws="cd ~/Vagrant/python/www/"
-alias sws="cd ~/Downloads/Courses/Startup\ Engineering/Workspace/"
+alias pws="cd ~/Vagrant/pyhome/www/"
 
 #grep alias to enable coloring all the time
 alias grep='grep --color=auto'
@@ -36,4 +35,4 @@ export PATH=$PATH:/usr/local/share/python
 export PATH="/usr/local/heroku/bin:$PATH"
 
 #lincolnloop best practice structure
-alias django-best-practice="django-admin.py startproject --template=https://github.com/lincolnloop/django-layout/zipball/master --extension=py,rst,gitignore,example"
+#alias django-best-practice="django-admin.py startproject --template=https://github.com/lincolnloop/django-layout/zipball/master --extension=py,rst,gitignore,example"
