@@ -29,6 +29,9 @@
 #sudo apt-get install php5-mysql -y
 #sudo apt-get install libmysqlclient-dev python-dev
 
+##install tree
+#sudo apt-get install tree
+
 ##install python virtualenv and pip
 #mkdir ~/.virtualenv
 #sudo apt-get install python-pip -y
