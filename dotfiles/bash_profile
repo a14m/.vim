@@ -4,6 +4,9 @@ export CLICOLOR=1
 #the default color scheme is "exfxcxdxbxegedabagacad"
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
+#increase the terminal history size
+export HISTSIZE=2000
+
 #aliases to easy change the most working directories
 alias arwa="cd ~/Vagrant/phpdevbox/www/theguide/"
 alias aws="cd ~/Documents/Programming\ Workspace/Android\ Workspace/"
