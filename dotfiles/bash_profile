@@ -36,3 +36,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 #lincolnloop best practice structure
 #alias django-best-practice="django-admin.py startproject --template=https://github.com/lincolnloop/django-layout/zipball/master --extension=py,rst,gitignore,example"
+alias wget-website="wget --recursive --no-clobber --page-requisites --convert-links --no-parent $@"

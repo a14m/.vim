@@ -237,6 +237,14 @@ let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['html'] }
 
+"vim-beautify plugin for js-html-css
+"================
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+"for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+"for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
 "python special configs"
 "========
 " Use :make to see syntax errors. (:cn and :cp to move around, :dist to see all errors)
