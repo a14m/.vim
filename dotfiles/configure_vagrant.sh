@@ -38,7 +38,7 @@
 #sudo pip install virtualenv
 
 ##install nodejs
-#sudo apt-get install python-software-properties python g++ make
+#sudo apt-get install python-software-properties python g++ make -y
 #sudo add-apt-repository ppa:chris-lea/node.js
 #sudo apt-get update
-#sudo apt-get install nodejs=0.10.18-1chl1~precise1
+#sudo apt-get install nodejs=0.10.18-1chl1~precise1 -y
