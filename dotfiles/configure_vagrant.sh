@@ -27,7 +27,7 @@
 ##install mysql
 #sudo apt-get install mysql-server -y
 #sudo apt-get install php5-mysql -y
-#sudo apt-get install libmysqlclient-dev python-dev
+#sudo apt-get install libmysqlclient-dev python-dev -y
 
 ##install tree
 #sudo apt-get install tree
@@ -36,3 +36,9 @@
 #mkdir ~/.virtualenv
 #sudo apt-get install python-pip -y
 #sudo pip install virtualenv
+
+##install nodejs
+#sudo apt-get install python-software-properties python g++ make
+#sudo add-apt-repository ppa:chris-lea/node.js
+#sudo apt-get update
+#sudo apt-get install nodejs=0.10.18-1chl1~precise1
