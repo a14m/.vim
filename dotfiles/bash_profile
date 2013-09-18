@@ -11,6 +11,7 @@ export HISTSIZE=2000
 alias arwa="cd ~/Vagrant/phpdevbox/www/theguide/"
 alias aws="cd ~/Documents/Programming\ Workspace/Android\ Workspace/"
 alias pws="cd ~/Vagrant/pyhome/www/"
+alias www="cd ~/Sites/"
 
 #grep alias to enable coloring all the time
 alias grep='grep --color=auto'
