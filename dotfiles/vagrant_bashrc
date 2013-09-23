@@ -108,3 +108,8 @@ fi
 
 alias www="cd /vagrant/www/"
 alias django-best-practice="django-admin.py startproject --template=https://github.com/lincolnloop/django-layout/zipball/master --extension=py,rst,gitignore,example"
+
+startVirtualEnv(){
+    source ~/.virtualenv/$1/bin/activate
+}
+alias virtualenvstart=startVirtualEnv
