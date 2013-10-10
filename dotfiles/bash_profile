@@ -17,9 +17,6 @@ alias www="cd ~/Sites/"
 alias grep='grep --color=auto'
 alias la='ls -a'
 
-#adding brew python to the PATH
-export PATH=$PATH:/usr/local/share/python
-
 # virtualenv should use Distribute instead of legacy setuptools
 #export VIRTUALENV_DISTRIBUTE=true
 
@@ -32,8 +29,14 @@ export PATH=$PATH:/usr/local/share/python
 # cache pip-installed packages to avoid re-downloading
 #export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
+#adding local/bin PATH before /bin PATH
+export PATH="/usr/local/bin:$PATH"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+## Adding the phonegap android locally android sdk
+export PATH=~/Documents/Android/ADT-Bundle/sdk/platform-tools:~/Documents/Android/ADT-Bundle/sdk/tools:$PATH
 
 #lincolnloop best practice structure
 #alias django-best-practice="django-admin.py startproject --template=https://github.com/lincolnloop/django-layout/zipball/master --extension=py,rst,gitignore,example"
