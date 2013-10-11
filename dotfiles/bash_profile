@@ -8,26 +8,13 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 export HISTSIZE=2000
 
 #aliases to easy change the most working directories
-alias arwa="cd ~/Vagrant/phpdevbox/www/theguide/"
-alias aws="cd ~/Documents/Programming\ Workspace/Android\ Workspace/"
 alias pws="cd ~/Vagrant/pyhome/www/"
+alias rws="cd ~/Vagrant/ruby/www/"
 alias www="cd ~/Sites/"
 
 #grep alias to enable coloring all the time
 alias grep='grep --color=auto'
 alias la='ls -a'
-
-# virtualenv should use Distribute instead of legacy setuptools
-#export VIRTUALENV_DISTRIBUTE=true
-
-# Centralized location for new virtual environments
-#export PIP_VIRTUALENV_BASE=$HOME/Venvs
-
-# pip should only run if there is a virtualenv currently activated
-#export PIP_REQUIRE_VIRTUALENV=true
-
-# cache pip-installed packages to avoid re-downloading
-#export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 #adding local/bin PATH before /bin PATH
 export PATH="/usr/local/bin:$PATH"
@@ -36,8 +23,27 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ## Adding the phonegap android locally android sdk
-export PATH=~/Documents/Android/ADT-Bundle/sdk/platform-tools:~/Documents/Android/ADT-Bundle/sdk/tools:$PATH
+export PATH=${PATH}:~/Documents/Android/ADT-Bundle/sdk/platform-tools:~/Documents/Android/ADT-Bundle/sdk/tools
 
-#lincolnloop best practice structure
+##lincolnloop best practice structure
 #alias django-best-practice="django-admin.py startproject --template=https://github.com/lincolnloop/django-layout/zipball/master --extension=py,rst,gitignore,example"
 alias wget-website="wget --recursive --no-clobber --page-requisites --convert-links --no-parent $@"
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+move_to_trash(){
+    if [ ! -d ~/.Trash/ ];then
+        mkdir ~/.Trash
+    fi
+    if [[ -d $1 && $1 != '' ]];then
+        mv $1 ~/.Trash/
+    elif [[ -f $1 && $1 != '' ]];then
+        mv $1 ~/.Trash/
+    else
+        echo "this is a custom .bash_profile wrapper around 'rm'"
+        echo "use this rm to move files or directories to '~/.Trash/' directory"
+    fi
+}
+alias rm=move_to_trash
