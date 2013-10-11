@@ -88,6 +88,10 @@ fi
 ###########################
 alias www="cd /vagrant/www/"
 
+##enable case-insensitive tab completion
+if [ ! -a ~/.inputrc ]; then echo "\$include /etc/inputrc" > ~/.inputrc; fi
+echo "set completion-ignore-case On" >> ~/.inputrc
+
 ##python and django specific configs
 #alias django-best-practice="django-admin.py startproject --template=https://github.com/lincolnloop/django-layout/zipball/master --extension=py,rst,gitignore,example"
 #startVirtualEnv(){
