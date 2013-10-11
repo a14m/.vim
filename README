@@ -10,11 +10,10 @@ Create symlinks :
 Add the appropriate .bash on the machine :
 
     MAC OS X :
-        ln -s ~/.vim/dotfiles/bash_profile ~/.bash_profile
+        ln -s ~/.vim/dotfiles/MacOSX/bash_profile ~/.bash_profile
+        ln -s ~/.vim/dotfiles/MacOSX/screenrc ~/.screenrc
+        ln -s ~/.vim/dotfiles/MacOSX/inputrc ~/.inputrc
 
-    Linux ( ubuntu_home , etc.) :
-        ln -s ~/.vim/dotfiles/filename ~/.bashrc 
-    
     Vagrant :
         run the `configure_vagrant.sh` script
 

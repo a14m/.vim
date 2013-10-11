@@ -18,10 +18,10 @@
 #ln -s ~/.vim/dotfiles/gitconfig ~/.gitconfig
 
 #rm ~/.bashrc
-#ln -s ~/.vim/dotfiles/vagrant_bashrc ~/.bashrc 
+#ln -s ~/.vim/dotfiles/Vagrant/vagrant_bashrc ~/.bashrc 
 
 #rm ~/.profile
-#ln -s ~/.vim/dotfiles/vagrant_profile ~/.profile 
+#ln -s ~/.vim/dotfiles/Vagrant/vagrant_profile ~/.profile 
 
 #mkdir /vagrant/www
 #source ~/.bashrc
