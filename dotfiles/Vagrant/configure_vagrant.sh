@@ -23,8 +23,10 @@
 #rm ~/.profile
 #ln -s ~/.vim/dotfiles/Vagrant/vagrant_profile ~/.profile 
 
-#mkdir /vagrant/www
 #source ~/.bashrc
+#if [ ! -d /vagrant/www/ ];then
+    #mkdir /vagrant/www
+#fi
 
 #cd ~/.vim/
 #git submodule init
