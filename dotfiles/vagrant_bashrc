@@ -107,9 +107,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 alias www="cd /vagrant/www/"
-alias django-best-practice="django-admin.py startproject --template=https://github.com/lincolnloop/django-layout/zipball/master --extension=py,rst,gitignore,example"
 
-startVirtualEnv(){
-    source ~/.virtualenv/$1/bin/activate
-}
-alias virtualenvstart=startVirtualEnv
+##python and django specific configs
+#alias django-best-practice="django-admin.py startproject --template=https://github.com/lincolnloop/django-layout/zipball/master --extension=py,rst,gitignore,example"
+#startVirtualEnv(){
+    #source ~/.virtualenv/$1/bin/activate
+#}
+#alias virtualenvstart=startVirtualEnv
+#alias runserver="./manage.py runserver 0.0.0.0:8000"
+#alias migrate="./manage.py migrate"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
