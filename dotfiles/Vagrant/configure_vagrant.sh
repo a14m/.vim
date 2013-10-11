@@ -64,7 +64,7 @@
 #sudo apt-get install python-software-properties python g++ make -y
 #sudo add-apt-repository ppa:chris-lea/node.js
 #sudo apt-get update
-#sudo apt-get install nodejs=0.10.18-1chl1~precise1 -y
+#sudo apt-get install nodejs -y
 
 ###############
 ##install rbenv
