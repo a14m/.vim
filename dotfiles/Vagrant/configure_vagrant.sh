@@ -7,6 +7,8 @@
 #sudo apt-get upgrade -y
 #sudo apt-get install git-core -y
 #sudo apt-get install vim -y
+#sudo apt-get install vim-nox -y
+#sudo apt-get install vim-rails -y
 #sudo apt-get install curl -y
 
 #################################################################
