@@ -1,6 +1,4 @@
-:filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+execute pathogen#infect()
 syntax on
 :filetype plugin indent on
 
@@ -103,8 +101,9 @@ set expandtab
 " set a vertical colomn at char 80
 "set colorcolumn=80
  
-"Wrap lines
-set wrap
+"let Vim Wrap lines or leave them as long as they get
+"set wrap
+set nowrap
 
 "set visiual bell
 set vb
@@ -118,11 +117,17 @@ set vb
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Omni complete functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set omnifunc=csscomplete#CompleteCSS
-set omnifunc=htmlcomplete#CompleteTags
-set omnifunc=phpcomplete#CompletePHP
-set omnifunc=javascriptcomplete#CompleteJS
-set omnifunc=pythoncomplete#Complete
+"set omnifunc=csscomplete#CompleteCSS
+"set omnifunc=htmlcomplete#CompleteTags
+"set omnifunc=phpcomplete#CompletePHP
+"set omnifunc=javascriptcomplete#CompleteJS
+"set omnifunc=pythoncomplete#Complete
+
+"ruby and rails onmifunc
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
 
 " Fast saving
@@ -203,11 +208,6 @@ inoremap <Nul> <C-x><C-o>
 "======
 let g:bufExplorerShowRelativePath=1  " Show relative paths.
 let g:bufExplorerSortBy='fullpath'   " Sort by full file path name.
-
-"SuperTab"
-"=========
-"let g:SuperTabMappingForward = '<c-space>'
-"let g:SuperTabMappingBackward = '<s-c-space>'
 
 "UltiSnips"
 "==========
