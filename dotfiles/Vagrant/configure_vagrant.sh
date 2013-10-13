@@ -19,11 +19,13 @@
 #ln -s ~/.vim/dotfiles/vimrc ~/.vimrc
 #ln -s ~/.vim/dotfiles/gitconfig ~/.gitconfig
 
+##adding vagrant files links for bash profile and rspec ruby test
 #rm ~/.bashrc
 #ln -s ~/.vim/dotfiles/Vagrant/vagrant_bashrc ~/.bashrc 
-
 #rm ~/.profile
 #ln -s ~/.vim/dotfiles/Vagrant/vagrant_profile ~/.profile 
+#rm ~/.rspec
+#ln -s ~/.vim/dotfiles/Vagrant/vagrant_rspec ~/.rspec 
 
 #source ~/.bashrc
 #if [ ! -d /vagrant/www/ ];then
