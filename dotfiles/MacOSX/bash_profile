@@ -29,9 +29,13 @@ export PATH=${PATH}:~/Documents/Android/ADT-Bundle/sdk/platform-tools:~/Document
 #alias django-best-practice="django-admin.py startproject --template=https://github.com/lincolnloop/django-layout/zipball/master --extension=py,rst,gitignore,example"
 alias wget-website="wget --recursive --no-clobber --page-requisites --convert-links --no-parent $@"
 
+##homebrew auto completetion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+
+##rbenv config.
+eval "$(rbenv init -)"
 
 move_to_trash(){
     if [ ! -d ~/.Trash/ ];then
