@@ -77,13 +77,11 @@
 #git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 #source ~/.bashrc
 
-#echo "#################################################"
-#echo "\t\tPlease add or uncomment these lines in your .bashrc"
-#echo 'export PATH="$HOME/.rbenv/bin:$PATH"'
-#echo 'eval "$(rbenv init -)"'
-#echo 'export RBENV_VERSION=1.9.3-p0'
-#echo "#################################################"
-
+#echo -e "\033[5;31m#################################################################\033[0m"
+#echo -e "\033[5;31m#\033[0;31m\tPlease add or uncomment these lines in your .bashrc\t\033[5;31m#\033[0;31m"
+#echo -e "\033[5;31m#\033[0;31m\t"'export PATH="$HOME/.rbenv/bin:$PATH"'"\t\t\t\033[5;31m#\033[0;31m"
+#echo -e "\033[5;31m#\033[0;31m\t"'eval "$(rbenv init -)"'"\t\t\t\t\t\033[5;31m#\033[0;31m"
+#echo -e "\033[5;31m#################################################################\033[0m"
 
 ################################
 ##install mongodb
