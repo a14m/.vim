@@ -92,3 +92,12 @@
 #echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 #sudo apt-get update
 #sudo apt-get install mongodb-10gen -y
+
+######################
+##install redis-server
+######################
+echo 'deb http://packages.dotdeb.org squeeze all' | sudo tee /etc/apt/sources.list.d/redis.list
+echo 'deb-src http://packages.dotdeb.org squeeze all' | sudo tee /etc/apt/sources.list.d/redis.list
+wget -q -O - http://www.dotdeb.org/dotdeb.gpg | sudo apt-key add -
+#sudo apt-get update
+#sudo apt-get install redis-server -y
