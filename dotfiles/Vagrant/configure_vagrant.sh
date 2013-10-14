@@ -96,8 +96,11 @@
 ######################
 ##install redis-server
 ######################
-echo 'deb http://packages.dotdeb.org squeeze all' | sudo tee /etc/apt/sources.list.d/redis.list
-echo 'deb-src http://packages.dotdeb.org squeeze all' | sudo tee /etc/apt/sources.list.d/redis.list
-wget -q -O - http://www.dotdeb.org/dotdeb.gpg | sudo apt-key add -
+#echo '# /etc/apt/sources.list.d/dotdeb.org.list' | sudo tee /etc/apt/sources.list.d/redis.list
+#echo 'deb http://packages.dotdeb.org squeeze all' | sudo tee -a /etc/apt/sources.list.d/redis.list
+#echo 'deb-src http://packages.dotdeb.org squeeze all' | sudo tee -a /etc/apt/sources.list.d/redis.list
+#wget -q -O - http://www.dotdeb.org/dotdeb.gpg | sudo apt-key add -
 #sudo apt-get update
 #sudo apt-get install redis-server -y
+
+
