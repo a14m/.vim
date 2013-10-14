@@ -4,115 +4,88 @@ syntax on
 
 let mapleader = ';' " define map leader
 
-"fix not copying between clipboard and vim
-set clipboard=unnamed
+set clipboard=unnamed "fix not copying between clipboard and vim
+
 "not used any more but left if needed in the future
 "vmap <leader>y :w !pbcopy<CR><CR>
 
-"fix backspace not deleteing existing text
-set backspace=indent,eol,start 
+set backspace=indent,eol,start "fix backspace not deleteing existing text
 "set whichwrap+=<,>,h,l
 
-"set numbers column on the left
-set number
+set number "set numbers column on the left
 
-"set colorscheme
-colorscheme xoria256
+colorscheme xoria256 "set colorscheme
 
-" Sets how many lines of history VIM has to remember
-" set history=700
+"set history=700 "sets how many lines of history VIM has to remember
 
-" display incomplete commands
-set showcmd         
+set showcmd "display incomplete commands
 
 "disable the modelines which i don't understand
 set modelines=0
 set nomodeline
 
-" Set to auto read when a file is changed from the outside
-set autoread
+set autoread "Set to auto read when a file is changed from the outside
 
-" Ignore compiled files 
-set wildignore=*.o,*~,*.pyc
+set wildignore=*.o,*~,*.pyc "Ignore compiled files 
 
-"set the encoding to utf-8
-set encoding=utf-8
+set encoding=utf-8 "set the encoding to utf-8
 
-" Set 7 lines to the curors - when moving vertical..
-"set so=7
+"set so=7 "Set 7 lines to the curors - when moving vertical..
 
-"Turn on WiLd menu
-set wildmenu 
+set wildmenu "Turn on WiLd menu
 
-" Always show the status line
-set laststatus=2
-" Format the status line
+set laststatus=2 " Always show the status line
+
+"Format the status line
 "set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
 
-"Always show current position
-set ruler 
+set ruler "Always show current position
 
-"The commandbar height
-"set cmdheight=1 
+"set cmdheight=1 "The commandbar height
 
 "set hid "Change buffer - without saving
 
-"Case Senetive searching shortend noic
-set noignorecase 
+set noignorecase "Case Senetive searching shortend noic
 
-"Ignore case when searching shortend ic
-"set ignorecase 
+"set ignorecase "Ignore case when searching shortend ic
 
 "set smartcase
 
-"Highlight search things shortend hls or nohls
-set hlsearch 
+set hlsearch "Highlight search things shortend hls or nohls
 
-"Make search act like search in modern browsers
-set incsearch 
-"Don't redraw while executing macros 
-"set nolazyredraw 
+set incsearch "Make search act like search in modern browsers
 
-"Set magic on, for regular expressions
-set magic 
+"set nolazyredraw "Don't redraw while executing macros 
 
-"Show matching bracets when text indicator is over them
-set showmatch 
+set magic "Set magic on, for regular expressions
 
+set showmatch "Show matching bracets when text indicator is over them
 
 set lbr
 
-"Auto indent
-set ai 
-
-"Smart indet
-set si 
+set ai "Auto indent
+set si "Smart indet
 
 "indentation
-"set softtabstop=4
-"set tabstop=4
-"set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
 "specific files indentation specs
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 set expandtab
 
-" set a vertical colomn at char 80
-"set colorcolumn=80
+"set colorcolumn=80 " set a vertical colomn at char 80
  
 "let Vim Wrap lines or leave them as long as they get
 "set wrap
 set nowrap
 
-"set visiual bell
-set vb
+set vb "set visiual bell
 
-" Abbreviate messages
-"set shortmess=atI   
+"set shortmess=atI "Abbreviate messages
 
-" don't jump to first character when paging
-"set nostartofline   
+"set nostartofline "don't jump to first character when paging
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Omni complete functions
@@ -129,40 +102,20 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
-
-" Fast saving
+"Fast saving
 nmap <leader>w :w<cr>
-" Override System READONLY files using w!!
-"cmap w!! %!sudo tee > /dev/null %
-
-" Fast quiting
+"Fast quiting
 nmap <leader>q :q<cr>
 cmap :Wq :wq
 cmap :WQ :wq
- 
-" Fast editing of the .vimrc
-"map <leader>e :vsp ~/.vimrc<cr>
-"map <leader>e :vsp ~/.vim/ultisnips/php.snippets<cr>
+
+"cmap w!! %!sudo tee > /dev/null % "Override System READONLY files using w!!
+"map <leader>e :vsp ~/.vimrc<cr> "Fast editing of the .vimrc
 
 "toggle folding
 nnoremap <space> za
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => MISC
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remove the Windows ^M - when the encodings gets messed up
-"nmap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
-
-"highlight curser line
-"=====================
-":hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-":nnoremap <leader>cc :set cursorline!<CR>
-"au WinLeave * set nocursorline nocursorcolumn
-"au WinEnter * set cursorline cursorcolumn
-"set cursorline cursorcolumn
-":nnoremap <leader>HC :set cursorcolumn!<CR>
+"auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
+inoremap <Nul> <C-x><C-o>
 
 "Easier window movement"
 "=======================
@@ -188,7 +141,22 @@ nmap j gj
 nmap k gk
 "nmap > gv>
 "nmap < gv<
-"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => MISC
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Remove the Windows ^M - when the encodings gets messed up
+"nmap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+"highlight curser line
+"=====================
+":hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+":nnoremap <leader>cc :set cursorline!<CR>
+"au WinLeave * set nocursorline nocursorcolumn
+"au WinEnter * set cursorline cursorcolumn
+"set cursorline cursorcolumn
+":nnoremap <leader>HC :set cursorcolumn!<CR>
 
 "==========="
 "Plugin maps"
@@ -201,8 +169,7 @@ nmap <leader>nt :NERDTree<cr>
 "cmap ntf NERDTreeFind<cr>
 "nmap <leader>ntq :NERDTreeClose<cr>
 
-"auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
-inoremap <Nul> <C-x><C-o>
+
 
 "BufExp"
 "======
@@ -243,12 +210,10 @@ let g:syntastic_mode_map={ 'mode': 'active',
 
 "vim-beautify plugin for js-html-css
 "================
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-"for html
-autocmd BufNewFile,BufRead *.html.erb set filetype=html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-"for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr> "for javascript
+autocmd BufNewFile,BufRead *.html.erb set filetype=html "for ruby erb template files
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr> "for Html
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr> "for css or scss
 
 "python special configs"
 "========
