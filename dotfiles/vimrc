@@ -6,10 +6,8 @@ let mapleader = ';' " define map leader
 
 set clipboard=unnamed "fix not copying between clipboard and vim
 
-"not used any more but left if needed in the future
-"vmap <leader>y :w !pbcopy<CR><CR>
-
-set backspace=indent,eol,start "fix backspace not deleteing existing text
+"fix backspace not deleteing existing text
+set backspace=indent,eol,start
 "set whichwrap+=<,>,h,l
 
 "set numbers column on the left
@@ -30,51 +28,59 @@ set undolevels=1000
 "number of lines to save for undo
 set undoreload=10000        
 
-set showcmd "display incomplete commands
+"display incomplete commands
+set showcmd
 
 "disable the modelines which i don't understand
 set modelines=0
 set nomodeline
 
-set autoread "Set to auto read when a file is changed from the outside
+"Ignore compiled files 
+set wildignore=*.o,*~,*.pyc
 
-set wildignore=*.o,*~,*.pyc "Ignore compiled files 
+"set the encoding to utf-8
+set encoding=utf-8
 
-set encoding=utf-8 "set the encoding to utf-8
+"Set 7 lines to the curors - when moving vertical..
+"set so=7
 
-"set so=7 "Set 7 lines to the curors - when moving vertical..
+"Turn on Wild menu
+set wildmenu 
 
-set wildmenu "Turn on WiLd menu
+" Always show the status line
+set laststatus=2 
 
-set laststatus=2 " Always show the status line
+"Always show current position
+set ruler
 
-"Format the status line
-"set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
+"The commandbar height
+"set cmdheight=1
 
-set ruler "Always show current position
+"Change buffer - without saving
+"set hid
 
-"set cmdheight=1 "The commandbar height
-
-"set hid "Change buffer - without saving
-
-set noignorecase "Case Senetive searching shortend noic
-
-"set ignorecase "Ignore case when searching shortend ic
-
+"Case Senetive searching shortend noic
+set noignorecase
+"Ignore case when searching shortend ic
+"set ignorecase
 "set smartcase
+"Highlight search things shortend hls or nohls
+set hlsearch
+"Make search act like search in modern browsers
+set incsearch
 
-set hlsearch "Highlight search things shortend hls or nohls
+"Don't redraw while executing macros 
+"set nolazyredraw
+"
+"Set magic on, for regular expressions
+set magic
 
-set incsearch "Make search act like search in modern browsers
-
-"set nolazyredraw "Don't redraw while executing macros 
-
-set magic "Set magic on, for regular expressions
-
-set showmatch "Show matching bracets when text indicator is over them
+"Show matching bracets when text indicator is over them
+set showmatch
+"ruby match do/end
+runtime macros/matchit.vim
 
 set lbr
-
 set ai "Auto indent
 set si "Smart indet
 
@@ -93,11 +99,17 @@ set expandtab
 "set wrap
 set nowrap
 
-set vb "set visiual bell
+"set visiual and error bells
+"set vb
+"set eb
+set noeb vb t_vb=
+au GUIEnter * set vb t_vb=
 
-"set shortmess=atI "Abbreviate messages
+"Abbreviate messages
+"set shortmess=atI
 
-"set nostartofline "don't jump to first character when paging
+"don't jump to first character when paging
+"set nostartofline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Omni complete functions
@@ -113,8 +125,6 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-"ruby match do/end
-runtime macros/matchit.vim
 
 "Fast saving
 nmap <leader>w :w<cr>
@@ -123,8 +133,8 @@ nmap <leader>q :q<cr>
 cmap :Wq :wq
 cmap :WQ :wq
 
-"cmap w!! %!sudo tee > /dev/null % "Override System READONLY files using w!!
-"map <leader>e :vsp ~/.vimrc<cr> "Fast editing of the .vimrc
+"Fast editing of the .vimrc
+"map <leader>e :vsp ~/.vimrc<cr>
 
 "toggle folding
 "set foldmethod=indent
@@ -152,8 +162,8 @@ nmap <silent> <leader>mj <C-W>J
 "noremap <silent> <leader>o <C-W>o
 
 "move in lines as you see them not as they are wrapped
-nmap j gj
-nmap k gk
+"nmap j gj
+"nmap k gk
 "nmap > gv>
 "nmap < gv<
 
@@ -220,7 +230,7 @@ augroup mine
     au BufWinEnter * exe "sign place 1337 line=1 name=mysign buffer=" . bufnr('%')
 augroup END
 let g:syntastic_mode_map={ 'mode': 'active',
-                     \ 'active_filetypes': [],
+                     \ 'active_filetypes': ['ruby'],
                      \ 'passive_filetypes': ['html','java'] }
 
 "vim-beautify plugin for js-html-css
