@@ -37,17 +37,17 @@ fi
 ##rbenv config.
 eval "$(rbenv init -)"
 
-move_to_trash(){
-    if [ ! -d ~/.Trash/ ];then
-        mkdir ~/.Trash
-    fi
-    if [[ -d $1 && $1 != '' ]];then
-        mv $1 ~/.Trash/
-    elif [[ -f $1 && $1 != '' ]];then
-        mv $1 ~/.Trash/
-    else
-        echo "this is a custom .bash_profile wrapper around 'rm'"
-        echo "use this rm to move files or directories to '~/.Trash/' directory"
-    fi
-}
-alias rm=move_to_trash
+#move_to_trash(){
+    #if [ ! -d ~/.Trash/ ];then
+        #mkdir ~/.Trash
+    #fi
+    #if [[ -d $1 && $1 != '' ]];then
+        #mv $1 ~/.Trash/
+    #elif [[ -f $1 && $1 != '' ]];then
+        #mv $1 ~/.Trash/
+    #else
+        #echo "this is a custom .bash_profile wrapper around 'rm'"
+        #echo "use this rm to move files or directories to '~/.Trash/' directory"
+    #fi
+#}
+#alias rm=move_to_trash

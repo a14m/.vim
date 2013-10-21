@@ -12,11 +12,23 @@ set clipboard=unnamed "fix not copying between clipboard and vim
 set backspace=indent,eol,start "fix backspace not deleteing existing text
 "set whichwrap+=<,>,h,l
 
-set number "set numbers column on the left
+"set numbers column on the left
+set number 
 
-colorscheme xoria256 "set colorscheme
+"set colorscheme
+colorscheme xoria256 
 
-"set history=700 "sets how many lines of history VIM has to remember
+"sets how many lines of history VIM has to remember
+"set history=700 
+
+"Save undo's after file closes
+set undofile
+"where to save undo histories
+set undodir=$HOME/.vim/undo
+"How many undos
+set undolevels=1000
+"number of lines to save for undo
+set undoreload=10000        
 
 set showcmd "display incomplete commands
 
@@ -101,6 +113,8 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+"ruby match do/end
+runtime macros/matchit.vim
 
 "Fast saving
 nmap <leader>w :w<cr>
@@ -113,6 +127,7 @@ cmap :WQ :wq
 "map <leader>e :vsp ~/.vimrc<cr> "Fast editing of the .vimrc
 
 "toggle folding
+"set foldmethod=indent
 nnoremap <space> za
 "auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
 inoremap <Nul> <C-x><C-o>
