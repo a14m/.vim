@@ -13,6 +13,9 @@ set backspace=indent,eol,start
 "set numbers column on the left
 set number 
 
+"for lusty explorer to work properly
+set hidden
+
 "set colorscheme
 colorscheme xoria256 
 
