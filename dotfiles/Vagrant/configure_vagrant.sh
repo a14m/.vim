@@ -9,6 +9,9 @@
 #sudo apt-get install vim -y
 #sudo apt-get install vim-nox -y
 #sudo apt-get install vim-rails -y
+#sudo add-apt-repository ppa:fcwu-tw/ppa -y
+#sudo apt-get update
+#sudo apt-get install vim -y
 #sudo apt-get install curl -y
 
 #################################################################
