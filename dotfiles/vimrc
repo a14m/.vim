@@ -213,7 +213,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "===========
 let g:airline_theme='powerlineish'
 "branch parts
-"let g:airline_enable_branch=1
+let g:airline_enable_branch=1
 "seperators
 "let g:airline_left_sep = '▶'
 "let g:airline_right_sep = '◀'
