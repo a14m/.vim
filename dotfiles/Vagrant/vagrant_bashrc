@@ -87,6 +87,7 @@ fi
 ##Special configrations depending on which machine
 ###########################
 alias www="cd /vagrant/www/"
+alias ask="cd /vagrant/www/AskNative/Backend/"
 
 ##enable case-insensitive tab completion
 if [ ! -a ~/.inputrc ]; then echo "\$include /etc/inputrc" > ~/.inputrc; fi
@@ -104,3 +105,4 @@ echo "set completion-ignore-case On" >> ~/.inputrc
 ##rbenv path and configs
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+export ZEUSSOCK=/tmp/zeus.sock
