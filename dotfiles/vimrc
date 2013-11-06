@@ -16,6 +16,9 @@ set number
 "set colorscheme
 colorscheme xoria256 
 
+"auto reload the changed files without prompting
+"set autoread
+
 "sets how many lines of history VIM has to remember
 "set history=700 
 
