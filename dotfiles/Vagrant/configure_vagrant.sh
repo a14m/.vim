@@ -70,10 +70,10 @@ sudo apt-get install tree
 ###############
 #install nodejs
 ###############
-#sudo apt-get install python-software-properties python g++ make -y
-#sudo add-apt-repository ppa:chris-lea/node.js
-#sudo apt-get update
-#sudo apt-get install nodejs -y
+sudo apt-get install python-software-properties python g++ make -y
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs -y
 
 ###############################
 #install mongodb
@@ -115,3 +115,4 @@ echo -e "\033[5;31m#############################################################
 rbenv install 1.9.3-p385
 gem install zeus --version '=0.13.4.pre2'
 gem install bundler
+sudo apt-get install imagemagick libmagickcore-dev -y

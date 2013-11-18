@@ -10,6 +10,7 @@ export HISTSIZE=2000
 #aliases to easy change the most working directories
 alias pws="cd ~/Vagrant/pyhome/www/"
 alias rws="cd ~/Vagrant/ruby/www/"
+alias ask="cd ~/Vagrant/ruby/www/AskNative/Backend/"
 alias www="cd ~/Sites/"
 
 #grep alias to enable coloring all the time
