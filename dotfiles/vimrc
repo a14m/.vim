@@ -202,7 +202,7 @@ nmap <leader>nt :NERDTree<cr>
 "BufExp"
 "======
 let g:bufExplorerShowRelativePath=1  " Show relative paths.
-let g:bufExplorerSortBy='fullpath'   " Sort by full file path name.
+let g:bufExplorerSortBy='name'       " Sort by file name.
 
 "UltiSnips"
 "==========
