@@ -2,3 +2,4 @@
 .netrwhist
 bundle/tags
 undo/*
+*.swp

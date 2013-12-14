@@ -116,3 +116,4 @@
 #gem install zeus --version '=0.13.4.pre2'
 #gem install bundler
 #sudo apt-get install imagemagick libmagickcore-dev -y
+#sudo npm install -g yo
