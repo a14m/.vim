@@ -20,14 +20,15 @@ alias la='ls -a'
 #adding local/bin PATH before /bin PATH
 export PATH="/usr/local/bin:$PATH"
 
-### Added by the Heroku Toolbelt
+# Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ## Adding the phonegap android locally android sdk
-export PATH=${PATH}:~/Documents/Android/ADT-Bundle/sdk/platform-tools:~/Documents/Android/ADT-Bundle/sdk/tools
+#export PATH=${PATH}:~/Documents/Android/ADT-Bundle/sdk/platform-tools:~/Documents/Android/ADT-Bundle/sdk/tools
 
 ##lincolnloop best practice structure
 #alias django-best-practice="django-admin.py startproject --template=https://github.com/lincolnloop/django-layout/zipball/master --extension=py,rst,gitignore,example"
+
 alias wget-website="wget --recursive --no-clobber --page-requisites --convert-links --no-parent $@"
 
 ##homebrew auto completetion
