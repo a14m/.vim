@@ -7,6 +7,9 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 #increase the terminal history size
 export HISTSIZE=2000
 
+#shell default editor
+export EDITOR='vim'
+
 #aliases to easy change the most working directories
 alias pws="cd ~/Vagrant/pyhome/www/"
 alias rws="cd ~/Vagrant/ruby/www/"
