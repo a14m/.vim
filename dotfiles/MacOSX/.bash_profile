@@ -34,6 +34,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 alias wget-website="wget --recursive --no-clobber --page-requisites --convert-links --no-parent $@"
 
+export TERM="xterm-256color"
+
 ##homebrew auto completetion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
