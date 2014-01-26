@@ -49,6 +49,8 @@ set encoding=utf-8
 
 "Turn on Wild menu
 set wildmenu 
+" Prevent command line completion cycle effect
+"set wildmode=list:longest 
 
 " Always show the status line
 set laststatus=2 
@@ -197,6 +199,9 @@ nmap <leader>nt :NERDTree<cr>
 "cmap ntf NERDTreeFind<cr>
 "nmap <leader>ntq :NERDTreeClose<cr>
 
+"NerdCommenter"
+"=============
+let NERDSpaceDelims = 1 " add a space after comment delimiter
 
 
 "BufExp"
