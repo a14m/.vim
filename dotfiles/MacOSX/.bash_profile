@@ -44,3 +44,7 @@ fi
 ##rbenv config.
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+## setting the ulimit for files
+ulimit -n 10000
+ulimit -u 1024
