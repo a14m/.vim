@@ -90,12 +90,12 @@ set ai "Auto indent
 set si "Smart indet
 
 "indentation
-set softtabstop=4
-set tabstop=4
-set shiftwidth=4
+set softtabstop=2
+set tabstop=2
+set shiftwidth=2
 "specific files indentation specs
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+" autocmd Filetype html setlocal ts=2 sts=2 sw=2
+" autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 set expandtab
 
 "set colorcolumn=80 " set a vertical colomn at char 80
@@ -256,3 +256,9 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr> "for css or 
 
 " More syntax highlighting.
 "let python_highlight_all = 1
+
+"Highlight the 80, 120 columns
+"=============================
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+" let &colorcolumn=join(range(81,999),",")
+let &colorcolumn="80,".join(range(120,999),",")

@@ -8,26 +8,27 @@
 [merge]
 	tool = vimdiff
 [user]
-    name =  Ahmed Abdel Razzak
-	email = eng.abdelrazzak@gmail.com
-[branch]
-	autosetuprebase = always
+  name =  Ahmed Abdel Razzak
+  email = eng.abdelrazzak@gmail.com
+; [branch]
+	; autosetuprebase = always
 [diff]
 	algorithm = patience
 [alias]
-	st = status
-	br = branch
-	df = diff
-    co = checkout
-    assume   = update-index --assume-unchanged
-    unassume = update-index --no-assume-unchanged
-    assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
-    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-    la = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-    lg = log --oneline --graph
-    ;ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-    ;fl = log -u
-    ldf = diff --cached HEAD^
-    wdf = diff --color-words --word-diff-regex='[A-z0-9_]+|[^[:space:]]'
+  st = status
+  br = branch
+  df = diff
+  co = checkout
+  assume   = update-index --assume-unchanged
+  unassume = update-index --no-assume-unchanged
+  assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  la = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  lg = log --oneline --graph
+  ; ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  ; fl = log -u
+  ldf = diff --cached HEAD^
+  wdf = diff --color-words --word-diff-regex='[A-z0-9_]+|[^[:space:]]'
+	up = "!git remote update -p; git merge --ff-only @{u}"
 [push]
-    default = current
+  default = current
