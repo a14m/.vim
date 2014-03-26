@@ -4,6 +4,15 @@ syntax on
 
 let mapleader = ';' " define map leader
 
+"set colorscheme
+colorscheme xoria256 
+
+" Make Vim more useful
+set nocompatible
+
+" Optimize for fast terminal connections
+set ttyfast
+
 set clipboard=unnamed "fix not copying between clipboard and vim
 
 "fix backspace not deleteing existing text
@@ -12,9 +21,6 @@ set backspace=indent,eol,start
 
 "set numbers column on the left
 set number 
-
-"set colorscheme
-colorscheme xoria256 
 
 "auto reload the changed files without prompting
 "set autoread
@@ -43,6 +49,9 @@ set wildignore=*.o,*~,*.pyc
 
 "set the encoding to utf-8
 set encoding=utf-8
+" Don’t add empty newlines at the end of files
+set binary
+set noeol
 
 "Set 7 lines to the curors - when moving vertical..
 "set so=7
