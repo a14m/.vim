@@ -50,8 +50,8 @@ set wildignore=*.o,*~,*.pyc
 "set the encoding to utf-8
 set encoding=utf-8
 " Don’t add empty newlines at the end of files
-set binary
-set noeol
+" set binary
+" set noeol
 
 "Set 7 lines to the curors - when moving vertical..
 "set so=7
