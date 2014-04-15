@@ -4,7 +4,7 @@
 
 #Create symlinks :
 
-```sh    
+```sh
 ln -s ~/.vim/dotfiles/vimrc ~/.vimrc
 ln -s ~/.vim/dotfiles/gitconfig ~/.gitconfig
 ```
@@ -13,9 +13,15 @@ ln -s ~/.vim/dotfiles/gitconfig ~/.gitconfig
 
 - **MAC OS X** :
   ```sh
-  ln -s ~/.vim/dotfiles/MacOSX/bash_profile ~/.bash_profile
-  ln -s ~/.vim/dotfiles/MacOSX/screenrc ~/.screenrc
-  ln -s ~/.vim/dotfiles/MacOSX/inputrc ~/.inputrc
+  ln -s ~/.vim/dotfiles/MacOSX/.bash_profile ~/.bash_profile
+  ln -s ~/.vim/dotfiles/MacOSX/.screenrc ~/.screenrc
+  ln -s ~/.vim/dotfiles/MacOSX/.inputrc ~/.inputrc
+  ln -s ~/.vim/dotfiles/MacOSX/.tmux.conf ~/.tmux.conf
+  ln -s ~/.vim/dotfiles/MacOSX/.brewfile ~/.brewfile
+
+  # install homebrew
+  # then install homebrew formulas using
+  brew bundle ~/.brewfile
   ```
 
 - **Vagrant** :

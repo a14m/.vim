@@ -1,0 +1,12 @@
+update
+upgrade
+install git
+install vim
+install openssl
+install bash-completion
+install tmux
+install youtube-dl
+install wget
+install tree
+install rbenv
+install ruby-build
