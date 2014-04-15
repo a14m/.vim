@@ -1,0 +1,27 @@
+# ~/.tmuxinator/ask.yml
+
+name: ask
+root: ~/Vagrant/ruby/www/gold_price_api
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+tmux_options: -f ~/.tmux.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - server:
+      layout: 5f72,181x55,0,0{50x55,0,0,0,130x55,51,0,3}
+      panes:
+        - zeus start
+        #- tail -f log/development.log
+        -
