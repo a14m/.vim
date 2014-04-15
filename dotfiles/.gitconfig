@@ -11,8 +11,8 @@
   name =  Ahmed Abdel Razzak
   email = eng.abdelrazzak@gmail.com
   username = artmees
-; [branch]
-	; autosetuprebase = always
+[branch]
+  autosetuprebase = always
 [diff]
 	algorithm = patience
 [alias]

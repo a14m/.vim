@@ -22,6 +22,9 @@ set backspace=indent,eol,start
 "set numbers column on the left
 set number 
 
+"use old regex faster engine
+set re=1
+
 "auto reload the changed files without prompting
 "set autoread
 
@@ -84,7 +87,7 @@ set hlsearch
 set incsearch
 
 "Don't redraw while executing macros 
-"set nolazyredraw
+set nolazyredraw
 "
 "Set magic on, for regular expressions
 set magic
@@ -151,7 +154,7 @@ cmap :WQ :wq
 "map <leader>e :vsp ~/.vimrc<cr>
 
 "toggle folding
-"set foldmethod=indent
+" set foldmethod=indent
 nnoremap <space> za
 "auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
 inoremap <Nul> <C-x><C-o>
@@ -203,10 +206,10 @@ nmap <silent> <leader>mj <C-W>J
 
 "NerdTree"
 "=========
-"nmap <leader>nt :NERDTreeToggle<cr>
-nmap <leader>nt :NERDTree<cr>
-"cmap ntf NERDTreeFind<cr>
-"nmap <leader>ntq :NERDTreeClose<cr>
+nmap <leader>nt :NERDTreeToggle<cr>
+" nmap <leader>nt :NERDTree<cr>
+" cmap ntf NERDTreeFind<cr>
+" nmap <leader>ntq :NERDTreeClose<cr>
 
 "NerdCommenter"
 "=============
