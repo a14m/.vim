@@ -18,6 +18,7 @@ ln -s ~/.vim/dotfiles/gitconfig ~/.gitconfig
   ln -s ~/.vim/dotfiles/MacOSX/.inputrc ~/.inputrc
   ln -s ~/.vim/dotfiles/MacOSX/.tmux.conf ~/.tmux.conf
   ln -s ~/.vim/dotfiles/MacOSX/.brewfile ~/.brewfile
+  ln -s ~/.vim/dotfiles/MacOSX/.tmuxinator/ask.yml ~/.tmuxinator/ask.yml
 
   # install homebrew
   # then install homebrew formulas using
