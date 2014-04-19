@@ -20,6 +20,7 @@ ln -s ~/.vim/dotfiles/gitconfig ~/.gitconfig
   ln -s ~/.vim/dotfiles/MacOSX/.brewfile ~/.brewfile
   ln -s ~/.vim/dotfiles/MacOSX/.tmuxinator/ask.yml ~/.tmuxinator/ask.yml
   ln -s ~/.vim/dotfiles/MacOSX/.tmuxinator/gpn.yml ~/.tmuxinator/gpn.yml
+  ln -s ~/.vim/dotfiles/MacOSX/.tmuxinator/atl.yml ~/.tmuxinator/atl.yml
 
   # install homebrew
   # then install homebrew formulas using

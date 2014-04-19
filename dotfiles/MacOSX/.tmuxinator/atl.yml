@@ -1,7 +1,7 @@
-# ~/.tmuxinator/gpn.yml
+# ~/.tmuxinator/atl.yml
 
-name: gpn
-root: ~/Vagrant/ruby/www/gold_price_api
+name: atl
+root: ~/Vagrant/ruby/www/atlas_api
 
 # Optional tmux socket
 # socket_name: foo
