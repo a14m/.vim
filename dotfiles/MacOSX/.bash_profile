@@ -16,6 +16,7 @@ alias rws="cd ~/Vagrant/ruby/www/"
 alias ask="cd ~/Vagrant/ruby/www/AskNative/Backend/"
 alias gpn="cd ~/Vagrant/ruby/www/gold_price_api/"
 alias atl="cd ~/Vagrant/ruby/www/atlas_api/"
+alias rdi="cd ~/Vagrant/ruby/www/AskNative/radio/"
 alias www="cd ~/Sites/"
 
 #grep alias to enable coloring all the time
