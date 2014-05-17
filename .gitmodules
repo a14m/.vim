@@ -1,54 +1,54 @@
 [submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
+  path = bundle/nerdcommenter
+  url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+  path = bundle/nerdtree
+  url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
+  path = bundle/supertab
+  url = https://github.com/ervandew/supertab.git
 [submodule "bundle/addon-mw-utils"]
-	path = bundle/addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+  path = bundle/addon-mw-utils
+  url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "bundle/tlib"]
-	path = bundle/tlib
-	url = https://github.com/tomtom/tlib_vim.git
+  path = bundle/tlib
+  url = https://github.com/tomtom/tlib_vim.git
 [submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
-    url = git://github.com/SirVer/ultisnips.git
-    ignore = dirty
+  path = bundle/ultisnips
+  url = git://github.com/SirVer/ultisnips.git
+  ignore = dirty
 [submodule "bundle/bufexplorer"]
-	path = bundle/bufexplorer
-	url = git://github.com/vim-scripts/bufexplorer.zip.git
-    ignore = dirty
+  path = bundle/bufexplorer
+  url = git://github.com/vim-scripts/bufexplorer.zip.git
+  ignore = dirty
 [submodule "bundle/vim-flake8"]
-	path = bundle/vim-flake8
-	url = https://github.com/nvie/vim-flake8.git
+  path = bundle/vim-flake8
+  url = https://github.com/nvie/vim-flake8.git
 [submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
+  path = bundle/syntastic
+  url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
-	url = https://github.com/bling/vim-airline.git
+  path = bundle/vim-airline
+  url = https://github.com/bling/vim-airline.git
 [submodule "bundle/vim-jsbeautify"]
-	path = bundle/vim-jsbeautify
-	url = https://github.com/maksimr/vim-jsbeautify.git
-    ignore = dirty
+  path = bundle/vim-jsbeautify
+  url = https://github.com/maksimr/vim-jsbeautify.git
+  ignore = dirty
 [submodule "bundle/tabular"]
-	path = bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
+  path = bundle/tabular
+  url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+  path = bundle/vim-fugitive
+  url = git://github.com/tpope/vim-fugitive.git
 [submodule "bundle/ctrlp.vim"]
-	path = bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
+  path = bundle/ctrlp.vim
+  url = https://github.com/kien/ctrlp.vim.git
 [submodule "bundle/vim-rubocop"]
-	path = bundle/vim-rubocop
-	url = https://github.com/ngmy/vim-rubocop
+  path = bundle/vim-rubocop
+  url = https://github.com/ngmy/vim-rubocop
 [submodule "bundle/vim-snippets"]
-	path = bundle/vim-snippets
-	url = git@github.com:honza/vim-snippets.git
-[submodule "/Users/abdelrazzak/.vim/bundle/jshint.vim"]
-	path = /Users/abdelrazzak/.vim/bundle/jshint.vim
-	url = https://github.com/wookiehangover/jshint.vim.git
+  path = bundle/vim-snippets
+  url = git@github.com:honza/vim-snippets.git
+[submodule "bundle/jshint.vim"]
+  path = bundle/jshint.vim
+  url = https://github.com/wookiehangover/jshint.vim.git
