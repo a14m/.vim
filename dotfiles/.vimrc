@@ -261,6 +261,10 @@ autocmd BufNewFile,BufRead *.html.erb set filetype=html "for ruby erb template f
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr> "for Html
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr> "for css or scss
 
+"vim-jshint plugin
+"===============
+let JSHintUpdateWriteOnly=1
+
 "python special configs"
 "========
 " Use :make to see syntax errors. (:cn and :cp to move around, :dist to see all errors)

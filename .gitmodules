@@ -49,3 +49,6 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = git@github.com:honza/vim-snippets.git
+[submodule "/Users/abdelrazzak/.vim/bundle/jshint.vim"]
+	path = /Users/abdelrazzak/.vim/bundle/jshint.vim
+	url = https://github.com/wookiehangover/jshint.vim.git
