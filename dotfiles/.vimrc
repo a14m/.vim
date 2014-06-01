@@ -23,7 +23,7 @@ set backspace=indent,eol,start
 set number 
 
 "use old regex faster engine
-set re=1
+" set re=1
 
 "auto reload the changed files without prompting
 "set autoread
