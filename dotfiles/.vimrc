@@ -250,16 +250,22 @@ augroup mine
     au BufWinEnter * sign define mysign
     au BufWinEnter * exe "sign place 1337 line=1 name=mysign buffer=" . bufnr('%')
 augroup END
+
 let g:syntastic_mode_map={ 'mode': 'active',
-                     \ 'active_filetypes': ['ruby'],
-                     \ 'passive_filetypes': ['html','java'] }
+                     \ 'active_filetypes': [],
+                     \ 'passive_filetypes': ['html','javascript'] }
+
 
 "vim-beautify plugin for js-html-css
 "================
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr> "for javascript
-autocmd BufNewFile,BufRead *.html.erb set filetype=html "for ruby erb template files
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr> "for Html
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr> "for css or scss
+
+"vim syntax highligt non standard extensions
+"===============
+autocmd BufNewFile,BufRead *.html.erb set filetype=html "for ruby erb template files
+autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby "for ruby json template files
 
 "vim-jshint plugin
 "===============

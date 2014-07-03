@@ -25,6 +25,7 @@ alias la='ls -a'
 
 #adding local/bin PATH before /bin PATH
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
