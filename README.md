@@ -5,8 +5,8 @@
 #Create symlinks :
 
 ```sh
-ln -s ~/.vim/dotfiles/vimrc ~/.vimrc
-ln -s ~/.vim/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/.vim/dotfiles/.vimrc ~/.vimrc
+ln -s ~/.vim/dotfiles/.gitconfig ~/.gitconfig
 ```
 
 ##Add the appropriate .bash on the machine :
