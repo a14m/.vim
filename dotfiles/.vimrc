@@ -134,7 +134,7 @@ au GUIEnter * set vb t_vb=
 "set omnifunc=csscomplete#CompleteCSS
 "set omnifunc=htmlcomplete#CompleteTags
 "set omnifunc=phpcomplete#CompletePHP
-"set omnifunc=javascriptcomplete#CompleteJS
+set omnifunc=javascriptcomplete#CompleteJS
 "set omnifunc=pythoncomplete#Complete
 
 "ruby and rails onmifunc
@@ -206,8 +206,8 @@ nmap <silent> <leader>mj <C-W>J
 
 "NerdTree"
 "=========
-nmap <leader>nt :NERDTreeToggle<cr>
-" nmap <leader>nt :NERDTree<cr>
+" nmap <leader>nt :NERDTreeToggle<cr>
+nmap <leader>nt :NERDTree<cr>
 " cmap ntf NERDTreeFind<cr>
 " nmap <leader>ntq :NERDTreeClose<cr>
 

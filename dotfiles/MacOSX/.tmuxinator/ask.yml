@@ -26,4 +26,4 @@ windows:
         #- tail -f log/development.log
         -
   - foreman: foreman start -f Procfile.dev
-  - grunt: cd ../webapp && grunt server
+  - webapp: cd ../webapp && npm start
