@@ -182,10 +182,6 @@ let NERDSpaceDelims = 1 " add a space after comment delimiter
 let g:bufExplorerShowRelativePath=1  " Show relative paths.
 let g:bufExplorerSortBy='name'       " Sort by file name.
 
-"SuperTab"
-"=========
-let g:SuperTabDefaultCompletionType = "<c-n>" " correct supertab direction
-
 "UltiSnips"
 "==========
 "let g:UltiSnipsUsePythonVersion = 2
