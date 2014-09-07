@@ -4,129 +4,67 @@ syntax on
 
 let mapleader = ';' " define map leader
 
-"set colorscheme
-colorscheme xoria256 
+colorscheme xoria256 "set colorscheme
 
-" Make Vim more useful
-set nocompatible
-
-" Optimize for fast terminal connections
-set ttyfast
-
-set clipboard=unnamed "fix not copying between clipboard and vim
-
-"fix backspace not deleteing existing text
-set backspace=indent,eol,start
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim variables
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible " Make Vim more useful
+set ttyfast " Optimize for fast terminal connections
+set clipboard=unnamed " fix not copying between clipboard and vim
+set backspace=indent,eol,start " fix backspace not deleteing existing text
 "set whichwrap+=<,>,h,l
-
-"set numbers column on the left
-set number 
-
-"use old regex faster engine
-" set re=1
-
-"auto reload the changed files without prompting
-"set autoread
-
-"sets how many lines of history VIM has to remember
-"set history=700 
-
-"Save undo's after file closes
-set undofile
-"where to save undo histories
-set undodir=$HOME/.vim/undo
-"How many undos
-set undolevels=1000
-"number of lines to save for undo
-set undoreload=10000        
-
-"display incomplete commands
-set showcmd
-
-"disable the modelines which i don't understand
-set modelines=0
-set nomodeline
-
-"Ignore compiled files 
-set wildignore=*.o,*~,*.pyc
-
-"set the encoding to utf-8
-set encoding=utf-8
-" Don’t add empty newlines at the end of files
-" set binary
-" set noeol
-
-"Set 7 lines to the curors - when moving vertical..
-"set so=7
-
-"Turn on Wild menu
-set wildmenu 
-" Prevent command line completion cycle effect
-"set wildmode=list:longest 
-
-" Always show the status line
-set laststatus=2 
-
-"Always show current position
-set ruler
-
-"The commandbar height
-"set cmdheight=1
-
-"Change buffer - without saving
-"set hid
-
-"Case Senetive searching shortend noic
-set noignorecase
-"Ignore case when searching shortend ic
-"set ignorecase
+set number " set numbers column on the left
+set re=1 " use old regex faster engine
+"set autoread "auto reload the changed files without prompting
+"set history=700 "sets how many lines of history VIM has to remember
+set undofile " Save undo's after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=1000 " How many undos
+set undoreload=10000 " number of lines to save for undo
+set showcmd " display incomplete commands
+set modelines=0 " disable the modelines which i don't understand
+set nomodeline " disable the modelines which i don't understand
+set wildignore=*.o,*~,*.pyc " Ignore compiled files
+set encoding=utf-8 " set the encoding to utf-8
+" set binary " Don’t add empty newlines at the end of files
+" set noeol " Don’t add empty newlines at the end of files
+"set so=7 " Set 7 lines to the curors - when moving vertical..
+set wildmenu " Turn on Wild menu
+"set wildmode=list:longest " Prevent command line completion cycle effect
+set laststatus=2 " Always show the status line
+set ruler " Always show current position
+"set cmdheight=1 "The commandbar height
+"set hid " Change buffer - without saving
+set noignorecase " Case Senetive searching shortend noic
+"set ignorecase " Ignore case when searching shortend ic
 "set smartcase
-"Highlight search things shortend hls or nohls
-set hlsearch
-"Make search act like search in modern browsers
-set incsearch
-
-"Don't redraw while executing macros 
-set nolazyredraw
-"
-"Set magic on, for regular expressions
-set magic
-
-"Show matching bracets when text indicator is over them
-set showmatch
-"ruby match do/end
-runtime macros/matchit.vim
-
+set hlsearch " Highlight search things shortend hls or nohls
+set incsearch " Make search act like search in modern browsers
+set nolazyredraw " Don't redraw while executing macros
+set magic " Set magic on, for regular expressions
+set showmatch " Show matching bracets when text indicator is over them
+runtime macros/matchit.vim " ruby match do/end
 set lbr
 set ai "Auto indent
 set si "Smart indet
-
-"indentation
-set softtabstop=2
-set tabstop=2
-set shiftwidth=2
-"specific files indentation specs
-" autocmd Filetype html setlocal ts=2 sts=2 sw=2
-" autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-set expandtab
-
+set softtabstop=2 " indentation
+set tabstop=2 " indentation
+set shiftwidth=2 " indentation
+set expandtab " convert tabs to spaces
 "set colorcolumn=80 " set a vertical colomn at char 80
- 
-"let Vim Wrap lines or leave them as long as they get
-"set wrap
-set nowrap
-
-"set visiual and error bells
-"set vb
-"set eb
+"set wrap " let Vim Wrap lines or leave them as long as they get
+set nowrap " let Vim Wrap lines or leave them as long as they get
+"set vb " set visiual and error bells
+"set eb " set visiual and error bells
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
+"set shortmess=atI " Abbreviate messages
+"set nostartofline " don't jump to first character when paging
+set ttimeoutlen=50 " faster timeout not to halt
 
-"Abbreviate messages
-"set shortmess=atI
 
-"don't jump to first character when paging
-"set nostartofline
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Omni complete functions
@@ -137,15 +75,23 @@ au GUIEnter * set vb t_vb=
 set omnifunc=javascriptcomplete#CompleteJS
 "set omnifunc=pythoncomplete#Complete
 
-"ruby and rails onmifunc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Specific FileTypes configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autocmd FileType html setlocal ts=2 sts=2 sw=2
+" autocmd FileType ruby setlocal ts=2 sts=2 sw=2
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd BufNewFile,BufRead *.html.erb set filetype=html " for ruby erb template files
+autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby " for ruby json template files
 
-"Fast saving
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Fast saving and quiting
 nmap <leader>w :w<cr>
-"Fast quiting
 nmap <leader>q :q<cr>
 cmap :Wq :wq
 cmap :WQ :wq
@@ -156,6 +102,7 @@ cmap :WQ :wq
 "toggle folding
 " set foldmethod=indent
 nnoremap <space> za
+
 "auto completion via ctrl-space (instead of the nasty ctrl-x ctrl-o)
 inoremap <Nul> <C-x><C-o>
 
@@ -200,10 +147,24 @@ nmap <silent> <leader>mj <C-W>J
 "set cursorline cursorcolumn
 ":nnoremap <leader>HC :set cursorcolumn!<CR>
 
-"==========="
-"Plugin maps"
-"==========="
+"Highlight the 80, 120 columns
+"=============================
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+" let &colorcolumn=join(range(81,999),",")
+let &colorcolumn="80,".join(range(120,999),",")
 
+"python special configs"
+"========
+" Use :make to see syntax errors. (:cn and :cp to move around, :dist to see all errors)
+"set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
+"set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+
+" More syntax highlighting.
+"let python_highlight_all = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin maps
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "NerdTree"
 "=========
 " nmap <leader>nt :NERDTreeToggle<cr>
@@ -221,11 +182,15 @@ let NERDSpaceDelims = 1 " add a space after comment delimiter
 let g:bufExplorerShowRelativePath=1  " Show relative paths.
 let g:bufExplorerSortBy='name'       " Sort by file name.
 
+"SuperTab"
+"=========
+let g:SuperTabDefaultCompletionType = "<c-n>" " correct supertab direction
+
 "UltiSnips"
 "==========
 "let g:UltiSnipsUsePythonVersion = 2
 let g:UltiSnipsSnippetsDir = "~/.vim/ultisnips"
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-b>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " let g:UltiSnipsEditSplit="vertical" " If you want :UltiSnipsEdit to split your window.
@@ -242,7 +207,6 @@ let g:airline_enable_branch=1
 let g:airline_section_y=""
 "let g:airline_section_gutter=""
 let g:airline_detect_whitespace=0
-set ttimeoutlen=50
 
 "Syntastic plugin
 "================
@@ -256,28 +220,8 @@ let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'passive_filetypes': ['html','javascript'] }
 
 
-"vim-beautify plugin for js-html-css
-"================
+"vim-beautify
+"============
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr> "for javascript
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr> "for Html
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr> "for css or scss
-
-"vim syntax highligt non standard extensions
-"===============
-autocmd BufNewFile,BufRead *.html.erb set filetype=html "for ruby erb template files
-autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby "for ruby json template files
-
-"python special configs"
-"========
-" Use :make to see syntax errors. (:cn and :cp to move around, :dist to see all errors)
-"set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
-"set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-
-" More syntax highlighting.
-"let python_highlight_all = 1
-
-"Highlight the 80, 120 columns
-"=============================
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
-" let &colorcolumn=join(range(81,999),",")
-let &colorcolumn="80,".join(range(120,999),",")
