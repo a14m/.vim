@@ -35,6 +35,5 @@ ln -s ~/.vim/dotfiles/.gitconfig ~/.gitconfig
 #Initalizing Submodules Plugins :
 ```sh
 cd ~/.vim/
-git submodule init
-git submodule update
+git submodule update --init --recursive
 ```
