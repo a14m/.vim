@@ -39,9 +39,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule "/Users/abdelrazzak/.vim/bundle/vim-coffee-script"]
-	path = /Users/abdelrazzak/.vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
