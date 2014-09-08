@@ -199,7 +199,6 @@ let g:bufExplorerSortBy='name'       " Sort by file name.
 "UltiSnips"
 "==========
 "let g:UltiSnipsUsePythonVersion = 2
-let g:UltiSnipsSnippetsDir = "~/.vim/ultisnips"
 let g:UltiSnipsExpandTrigger="<c-b>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
