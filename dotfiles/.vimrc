@@ -167,6 +167,18 @@ let &colorcolumn="80,".join(range(120,999),",")
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin maps
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Vim-Coffee"
+"===========
+" let coffee_make_options = '--bare' " options passed to coffee
+let coffee_compile_vert = 1 " open compiled in vertical buffer
+let coffee_watch_vert = 1 " open watched in vertical buffer
+let coffee_run_vert = 1 " open run in vertical buffer
+" nmap <silent> <leader>cr :CoffeeRun<cr>
+" nmap <silent> <leader>cw :CoffeeWatch<cr>
+" nmap <silent> <leader>cc :CoffeeCompile<cr>
+" nmap <silent> <leader>cl :CoffeeLint<cr>
+
+
 "NerdTree"
 "=========
 " nmap <leader>nt :NERDTreeToggle<cr>
