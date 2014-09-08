@@ -36,12 +36,12 @@
 [submodule "bundle/ctrlp.vim"]
   path = bundle/ctrlp.vim
   url = https://github.com/kien/ctrlp.vim.git
-[submodule "bundle/vim-snippets"]
-  path = bundle/vim-snippets
-  url = git@github.com:honza/vim-snippets.git
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "/Users/abdelrazzak/.vim/bundle/vim-coffee-script"]
 	path = /Users/abdelrazzak/.vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips
