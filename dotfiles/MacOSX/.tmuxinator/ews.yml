@@ -1,7 +1,7 @@
-# ~/.tmuxinator/atl.yml
+# ~/.tmuxinator/ews.yml
 
-name: atl
-root: ~/Vagrant/ruby/www/atlas_api
+name: ews
+root: ~/Vagrant/ruby/www/envent
 
 # Optional tmux socket
 # socket_name: foo
@@ -22,6 +22,6 @@ windows:
   - server:
       layout: 5f72,181x55,0,0{50x55,0,0,0,130x55,51,0,3}
       panes:
-        - zeus start
+        - bundle exec zeus start
         #- tail -f log/development.log
         -

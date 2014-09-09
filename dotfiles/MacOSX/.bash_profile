@@ -11,7 +11,7 @@ export HISTSIZE=2000
 export EDITOR='vim'
 
 #aliases to easy change the most working directories
-alias rws="cd ~/Vagrant/ruby/www/"
+alias ews="cd ~/Vagrant/ruby/www/envent/"
 alias kws="cd ~/Vagrant/kali/www/"
 alias ask="cd ~/Vagrant/ruby/www/AskNative/Backend/"
 alias rdi="cd ~/Vagrant/ruby/www/AskNative/radio/"
