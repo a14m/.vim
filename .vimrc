@@ -157,6 +157,13 @@ let g:airline_enable_branch=1
 "let g:airline_left_sep = '▶'
 "let g:airline_right_sep = '◀'
 "modes
+let g:airline_section_b="%{fugitive#head()}"
 let g:airline_section_y=""
 "let g:airline_section_gutter=""
 let g:airline_detect_whitespace=0
+
+"Gitgutter
+"=========
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_map_keys = 0
+let g:gitgutter_realtime = 0
