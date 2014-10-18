@@ -14,6 +14,9 @@ ln -s ~/.vim/.vimrc ~/.vimrc
 ```sh
 cd ~/.vim/
 git submodule update --init --recursive
+
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh
 ```
 
 #Dotfiles :
