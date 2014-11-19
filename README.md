@@ -20,4 +20,4 @@ cd ~/.vim/bundle/YouCompleteMe
 ```
 
 #Dotfiles :
-other `.dotfiles` setup have been moved to [dotfiles](https://bitbucket.org/artmees/dotfiles)
+other `.dotfiles` setup have been moved to [dotfiles](https://gitlab.com/artmees/dotfiles)
