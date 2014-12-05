@@ -107,6 +107,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd BufNewFile,BufRead *.html.erb set filetype=html " for ruby erb template files
 autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby " for ruby json template files
 autocmd BufRead,BufNewFile *.md setlocal spell " spell check md files
+autocmd BufRead,BufNewFile *.markdown setlocal spell " spell check md files
 autocmd FileType gitcommit setlocal spell " spell check commits
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
