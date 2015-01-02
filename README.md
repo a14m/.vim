@@ -19,5 +19,13 @@ cd ~/.vim/bundle/YouCompleteMe
 ./install.sh
 ```
 
+#Updating Submodules Plugins :
+```
+cd ~/.vim/
+git submodule update --remote --merge
+```
+
+be sure to re-install YouCompleteMe after updating (specially Python)
+
 #Dotfiles :
 other `.dotfiles` setup have been moved to [dotfiles](https://gitlab.com/artmees/dotfiles)
