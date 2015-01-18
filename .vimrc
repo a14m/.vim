@@ -134,7 +134,7 @@ let coffee_run_vert = 1 " open run in vertical buffer
 " nmap <silent> <leader>cw :CoffeeWatch<cr>
 " nmap <silent> <leader>cc :CoffeeCompile<cr>
 " nmap <silent> <leader>cl :CoffeeLint<cr>
-noremap <buffer> <c-w> :CoffeeWatch<cr>
+nnoremap <silent> <leader>mw :CoffeeWatch<cr>
 
 "NerdTree"
 "=========
