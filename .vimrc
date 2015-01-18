@@ -109,6 +109,9 @@ autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby " for ruby json tem
 autocmd BufRead,BufNewFile *.md setlocal spell " spell check md files
 autocmd BufRead,BufNewFile *.markdown setlocal spell " spell check md files
 autocmd FileType gitcommit setlocal spell " spell check commits
+autocmd FileType javascript noremap <buffer> <c-f> :call JsBeautify()<cr>
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => MISC
@@ -131,6 +134,7 @@ let coffee_run_vert = 1 " open run in vertical buffer
 " nmap <silent> <leader>cw :CoffeeWatch<cr>
 " nmap <silent> <leader>cc :CoffeeCompile<cr>
 " nmap <silent> <leader>cl :CoffeeLint<cr>
+noremap <buffer> <c-w> :CoffeeWatch<cr>
 
 "NerdTree"
 "=========
