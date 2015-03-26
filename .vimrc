@@ -158,7 +158,7 @@ let g:bufExplorerSortBy='name'       " Sort by file name.
 let g:airline_theme='wombat'
 let g:airline_powerline_fonts = 0
 "branch parts
-let g:airline_enable_branch=1
+let g:airline#extensions#branch#enabled = 1
 "seperators
 "let g:airline_left_sep = '▶'
 "let g:airline_right_sep = '◀'
@@ -166,7 +166,8 @@ let g:airline_enable_branch=1
 let g:airline_section_b="%{fugitive#head()}"
 let g:airline_section_y=""
 "let g:airline_section_gutter=""
-let g:airline_detect_whitespace=0
+let g:airline#extensions#whitespace#enabled = 0
+" let g:airline#extensions#tabline#enabled = 1
 
 "Gitgutter
 "=========
@@ -178,3 +179,7 @@ let g:gitgutter_eager = 0
 "UltiSnips
 "=========
 let g:UltiSnipsExpandTrigger="<c-b>"
+
+"CtrlP
+"=====
+let g:ctrlp_custom_ignore = '\v[\/](coverage|vendor|tmp|.tmp|bower_components|node_modules|dist)$'

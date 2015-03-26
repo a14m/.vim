@@ -25,7 +25,11 @@ cd ~/.vim/
 git submodule update --remote --merge
 ```
 
-be sure to re-install YouCompleteMe after updating (specially Python)
+be sure to re-install YouCompleteMe after updating (specially Python) using
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh
+```
 
 #Dotfiles :
 other `.dotfiles` setup have been moved to [dotfiles](https://gitlab.com/artmees/dotfiles)
