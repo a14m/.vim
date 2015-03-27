@@ -104,6 +104,8 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_include_object = 1
+autocmd FileType ruby,eruby let g:rubycomplete_include_objectspace = 1
 autocmd BufNewFile,BufRead *.html.erb set filetype=html " for ruby erb template files
 autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby " for ruby json template files
 autocmd BufRead,BufNewFile *.md setlocal spell " spell check md files
@@ -183,3 +185,7 @@ let g:UltiSnipsExpandTrigger="<c-b>"
 "CtrlP
 "=====
 let g:ctrlp_custom_ignore = '\v[\/](coverage|vendor|tmp|.tmp|bower_components|node_modules|dist)$'
+
+"MatchTagAlways
+"==============
+let g:mta_filetypes = { 'html' : 1 }

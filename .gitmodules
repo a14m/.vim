@@ -50,3 +50,9 @@
 [submodule "bundle/vim-jsbeautify"]
 	path = bundle/vim-jsbeautify
 	url = https://github.com/maksimr/vim-jsbeautify
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = https://github.com/tpope/vim-rails
+[submodule "bundle/vim-rbenv"]
+	path = bundle/vim-rbenv
+	url = https://github.com/tpope/vim-rbenv
