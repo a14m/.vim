@@ -53,6 +53,3 @@
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = https://github.com/tpope/vim-rails
-[submodule "bundle/vim-rbenv"]
-	path = bundle/vim-rbenv
-	url = https://github.com/tpope/vim-rbenv
