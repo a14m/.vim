@@ -56,3 +56,6 @@
 [submodule "bundle/vim-ctrlspace"]
 	path = bundle/vim-ctrlspace
 	url = https://github.com/szw/vim-ctrlspace
+[submodule "bundle/vim-rubocop"]
+	path = bundle/vim-rubocop
+	url = git@github.com:ngmy/vim-rubocop.git
