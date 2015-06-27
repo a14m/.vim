@@ -1,5 +1,5 @@
 .DS_Store
 .netrwhist
-bundle/tags
+bundle/*
 undo/*
 *.swp
