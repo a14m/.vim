@@ -25,6 +25,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'honza/vim-snippets'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 syntax on

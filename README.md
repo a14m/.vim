@@ -10,13 +10,14 @@ git clone git@github.com:artmees/dotvim.git ~/.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
 ```
 
-#Initalizing Plugins :
+#Installing Plugins :
 ```sh
-# Vim
+vim +PluginInstall +qall
+# Or from Vim
 :PluginInstall
 ```
 
-#Updating Submodules Plugins :
+#Updating Plugins :
 ```
 # Vim
 :PluginUpdate
